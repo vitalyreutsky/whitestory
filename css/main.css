@@ -164,7 +164,7 @@ img {
 }
 
 .breadcrumbs {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .breadcrumbs__list {
   display: -webkit-box;
@@ -801,12 +801,8 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  min-height: 300px;
-}
-.about__content {
-  padding-top: 50px;
+  padding-top: 130px;
+  padding-bottom: 10px;
 }
 
 .swiper-wrapper {
@@ -862,9 +858,8 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  min-height: 300px;
+  padding-top: 130px;
+  padding-bottom: 10px;
 }
 .price__content {
   padding-top: 70px;
@@ -1051,12 +1046,11 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  min-height: 300px;
+  padding-top: 130px;
+  padding-bottom: 10px;
 }
 .team__content {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 .team__row {
   display: -webkit-box;
@@ -1182,14 +1176,21 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  min-height: 300px;
+  padding-top: 130px;
+  padding-bottom: 10px;
 }
 .contacts__content {
   padding-top: 70px;
 }
+.contacts__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .contacts__form {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
   background: -webkit-gradient(linear, left top, right top, from(#646678), color-stop(#595865), to(#353338));
   background: -o-linear-gradient(left, #646678, #595865, #353338);
   background: linear-gradient(90deg, #646678, #595865, #353338);
@@ -1239,7 +1240,22 @@ img {
 .contacts .form__input:focus::placeholder {
   color: #fff;
 }
+.contacts .contacts__info {
+  margin-left: 100px;
+}
+.contacts .contacts__social a {
+  padding-left: 0;
+  padding-right: 10px;
+}
 
+@media (max-width: 1024px) {
+  .contacts .contacts__info-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 @media (max-width: 768px) {
   .contacts__prev {
     min-height: 200px;
@@ -1247,6 +1263,17 @@ img {
   }
   .contacts .section-title {
     padding-top: 120px;
+  }
+  .contacts__information {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  .contacts .contacts__info {
+    margin-left: 0;
   }
 }
 @media (max-width: 576px) {
@@ -1261,6 +1288,70 @@ img {
   }
   .contacts .form__input {
     border-bottom: 2px solid #fff;
+  }
+}
+.vacancies {
+  padding: 0px 0px 100px;
+  overflow: hidden;
+}
+.vacancies__prev {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/vacansies.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 10px;
+}
+.vacancies__content {
+  padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .vacancies__prev {
+    min-height: 200px;
+    padding: 60px 0px 10px;
+  }
+  .vacancies .section-title {
+    padding-top: 120px;
+  }
+}
+@media (max-width: 576px) {
+  .vacancies {
+    padding-bottom: 50px;
+  }
+}
+.information {
+  padding: 0px 0px 100px;
+  overflow: hidden;
+}
+.information__prev {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/information.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/information.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/information.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 10px;
+}
+.information__content {
+  padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .information__prev {
+    min-height: 200px;
+    padding: 60px 0px 10px;
+  }
+  .information .section-title {
+    padding-top: 120px;
+  }
+}
+@media (max-width: 576px) {
+  .information {
+    padding-bottom: 50px;
   }
 }
 .title, .section__title {
@@ -1654,6 +1745,17 @@ img {
     top: -25px;
     left: 0;
     font-size: 11px;
+  }
+}
+.map {
+  width: 100%;
+  height: 500px;
+  background-color: #4c4957;
+}
+
+@media (max-width: 768px) {
+  .map {
+    height: 300px;
   }
 }
 /*# sourceMappingURL=main.css.map */
