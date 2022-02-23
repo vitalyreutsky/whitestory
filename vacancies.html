@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Вакансии</title>
+  <link
+    rel="preload"
+    href="fonts/MullerRegular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script
+    src="https://api-maps.yandex.ru/2.1/?apikey=03207180-c983-4016-b49f-4164475b0088&lang=ru_RU"
+    type="text/javascript"
+  ></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="contacts__inner header__top-connection">
+              <a class="contacts__icon" href="index.html">
+                <picture>
+                  <source srcset="img/logo-dark2.avif" type="image/avif" />
+                  <source srcset="img/logo-dark2.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="img/logo-dark2.png"
+                    class="image"
+                    width="100"
+                    height="100"
+                    alt="logo"
+                  />
+                </picture>
+              </a>
+              <div class="header__info-connection contacts__info-connection">
+                <div
+                  class="contacts__info-phones"
+                  data-da=".menu__list,768,last"
+                >
+                  <svg class="header__icon-phone icon__phone">
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                  <a
+                    class="contacts__info-phone header__info-phone"
+                    href="tel:+375336294094"
+                    >+375 (33) 629-40-94</a
+                  >
+                  <a class="contacts__info-phone" href="tel:+375164594094"
+                    >+375 (1645) 94-0-94</a
+                  >
+                </div>
+                <div
+                  class="contacts__info-email"
+                  data-da=".menu__list,768,last"
+                >
+                  <svg class="header__icon-email">
+                    <use xlink:href="img/sprite.svg#email"></use>
+                  </svg>
+                  <a href="mailto:vreutsky77@mail.ru">whitestory@tut.by</a>
+                </div>
+              </div>
+              <div class="contacts__info-item">
+                <div>‌ПН-ПТ 8.00-20.00</div>
+                <div>СБ 9.00-15.00</div>
+                <div>Воскресенье — выходной</div>
+              </div>
+              <button
+                class="burger"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                data-burger
+              >
+                <span class="burger__line"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__menu">
+              <nav
+                class="menu"
+                data-menu
+                data-da=".header__top-connection,768,1"
+              >
+                <ul class="menu__list">
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="index.html">Главная</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="about.html">О нас</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="price.html">Цены</a>
+                  </li>
+
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="team.html">Наши врачи</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a
+                      class="menu__list-link"
+                      href="contacts.html"
+                      >Контакты</a
+                    >
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link menu__list-link--active" href="vacancies.html"
+                      >Вакансии</a
+                    >
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="information.html"
+                      >Информация</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+
+              <button
+                class="btn-reset form__btn"
+                data-graph-path="modal"
+                data-da=".header__top-connection,768,2"
+              >
+                Записаться на прием
+              </button>
+            </div>
+          </div>
+        </div>
+         <div class="graph-modal">
+  <div
+    class="graph-modal__container"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal"
+  >
+    <button
+      class="btn-reset graph-modal__close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content">
+      <div class="graph-modal__content">
+        <h4 class="graph-modal__title">
+          Заполните заявку и мы скоро с вами свяжемся
+        </h4>
+      </div>
+    </div>
+    <form action="#" class="form-modal">
+      <div class="form__input-block">
+        <input
+          class="input-reset form__input"
+          type="text"
+          name="Имя"
+          id="modal-name"
+          required
+        />
+        <label class="form__label" for="modal-name">Введите ваше имя</label>
+      </div>
+      <div class="form__input-block">
+        <input
+          class="input-reset form__input"
+          type="text"
+          name="Имя"
+          id="modal-phone"
+          placeholder="маска"
+          required
+        />
+        <label class="form__label" for="modal-phone"
+          >Введите ваш номер телефона</label
+        >
+      </div>
+      <button class="btn-reset form__btn">Отправить</button>
+    </form>
+  </div>
+</div>
+
+      </header>
+
+      <main class="main">
+        <section class="section vacancies">
+          <div class="section__prev vacancies__prev">
+            <div class="container">
+              <h2 class="section-title">Вакансии</h2>
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link"
+                      >White Story</a
+                    >
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a href="about.html" class="breadcrumbs__link">Вакансии</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="about__content"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <div class="container">
+
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+  <div class="footer__content">
+    <div class="container">
+      <div class="contacts__inner">
+        <a class="contacts__icon" href="index.html" data-da=".menu__list,768,0">
+          <picture>
+            <source srcset="img/logo-dark2.avif" type="image/avif" />
+            <source srcset="img/logo-dark2.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="img/logo-dark2.png"
+              class="image"
+              width="100"
+              height="100"
+              alt="logo"
+            />
+          </picture>
+        </a>
+        <div class="contacts__info">
+          <h3 class="contacts__info-title">Контактная информация:</h3>
+          <div class="contacts__info-map">
+            <a
+              class="contacts__info-link"
+              href="https://yandex.by/maps/26938/ivacevichi/?ll=25.344508%2C52.711478&mode=poi&poi%5Bpoint%5D=25.344489%2C52.711390&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D135267260058&z=19.4"
+              target="_blank"
+              >Мы на карте</a
+            >
+            <svg class="contacts__info-mark">
+              <use xlink:href="img/sprite.svg#markerF"></use>
+            </svg>
+          </div>
+          <div class="contacts__info-adress">
+            г. Ивацевичи, ул. Советская, д. 1а, пом.17 (2 этаж)
+          </div>
+          <div class="contacts__info-row">
+            <div class="contacts__info-item">
+              <h5 class="contacts__info-timetable">Режим работы:</h5>
+              <div>‌Пн-Пт 8.00-20.00</div>
+              <div>Сб 9.00-15.00</div>
+              <div>Воскресенье — выходной</div>
+            </div>
+            <div class="contacts__info-connection">
+              <h5 class="contacts__info-title">Связаться с нами:</h5>
+              <div class="contacts__info-phones">
+                <svg class="footer__icon-phone">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <div>
+                  <a class="contacts__info-phone" href="tel:+375336294094"
+                    >+375 (33) 629-40-94</a
+                  >
+                  <a class="contacts__info-phone" href="tel:+375164594094"
+                    >+375 (1645) 94-0-94</a
+                  >
+                </div>
+              </div>
+              <div class="contacts__info-email">
+                <svg class="footer__icon-email">
+                  <use xlink:href="img/sprite.svg#email"></use>
+                </svg>
+                <a href="mailto:vreutsky77@mail.ru">whitestory@tut.by</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__social">
+          <h5 class="contacts__info-title">Следите за нами в instagram:</h5>
+          <a target="_blank" href="https://www.instagram.com/whitestory.by">
+            <svg class="footer__icon-insta">
+              <use xlink:href="img/sprite.svg#insta"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copyright">
+    <div class="container">
+      <p>White Story 2020</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
