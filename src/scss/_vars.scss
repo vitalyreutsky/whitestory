@@ -1,0 +1,16 @@
+//Colors
+$black: #363838;
+$white: #fff;
+$dark-blue: rgb(76, 73, 87);
+$light-blue: rgb(121, 108, 156);
+$grey: #dfdfdf;
+$dark-violet: rgb(38, 32, 54);
+$gradient-bg: linear-gradient(90deg, #646678, #595865, #353338);
+$gradient-footer-bg: linear-gradient(
+  90deg,
+  #e6e7f4,
+  #d5d0dc
+);
+$content-width: 1250px;
+$container-offset: 10px;
+$container-width: calc(var($content-width) + (var($container-offset) * 2));

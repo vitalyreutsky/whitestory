@@ -1,0 +1,77 @@
+.top {
+  overflow: hidden;
+  &__background-img {
+    background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+  }
+  &__inner {
+    max-width: 750px;
+    padding-top: 250px;
+  }
+  &__info {
+    //opacity: 0.7;
+  }
+  &__title {
+    font-size: 110px;
+    line-height: 105px;
+    color: $white;
+    padding-bottom: 20px;
+    //text-shadow: 5px 3px 2px $dark-blue;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 200px;
+      height: 2px;
+      background-color: $white;
+    }
+  }
+  &__text {
+    padding-top: 20px;
+    color: $white;
+    font-size: 30px;
+
+    opacity: 0;
+  }
+}
+
+@include small-tablet {
+  .top {
+    &__title {
+      font-size: 80px;
+      line-height: 1;
+    }
+    &__text {
+      font-size: 24px;
+    }
+  }
+}
+
+@include mobile-mini {
+  .top {
+    &__background-img {
+      min-height: 650px;
+    }
+    &__title {
+      padding-bottom: 10px;
+    }
+    &__text {
+      padding-top: 10px;
+    }
+    &__inner {
+      //padding-top: 200px;
+    }
+    &__title {
+      font-size: 50px;
+      line-height: 1;
+    }
+    &__text {
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.team {
+  overflow: hidden;
+  padding: 0px 0px 100px;
+  &__prev {
+    background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/team.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    min-height: 300px;
+  }
+
+  &__content {
+    padding-top: 70px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+  }
+  &__block {
+    border-bottom: 2px solid $grey;
+    padding: 50px 0;
+    &:last-child {
+      border: none;
+    }
+  }
+  &__card {
+    display: flex;
+    justify-content: center;
+  }
+  &__photo {
+    margin-right: 50px;
+  }
+  &__info {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+
+    flex: 0 1 50%;
+  }
+
+  &__name {
+    font-size: 30px;
+    color: $dark-blue;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 17px;
+  }
+  &__info-title {
+    margin-top: 20px;
+  }
+  &__info-list {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &__info-item {
+    position: relative;
+    padding-left: 25px;
+    &::before {
+      content: "";
+      background: url("../img/svg/done.svg");
+      background-repeat: no-repeat;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 5px;
+      left: 0;
+    }
+  }
+  &__info-text {
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+}
+
+@include small-tablet {
+  .team {
+    padding: 0px;
+    &__prev {
+      min-height: 200px;
+      padding: 60px 0px 10px;
+    }
+    &__content {
+      padding-top: 30px;
+    }
+    &__card {
+      flex-wrap: wrap;
+    }
+    .section-title {
+      padding-top: 120px;
+    }
+    &__info {
+      flex: 100%;
+    }
+    &__photo {
+      margin: 0;
+      img {
+        width: 300px;
+        height: 400px;
+      }
+    }
+    &__name {
+      text-align: center;
+    }
+  }
+}
+
+@include mobile {
+  .team {
+    &__content {
+      padding-top: 10px;
+    }
+  }
+}

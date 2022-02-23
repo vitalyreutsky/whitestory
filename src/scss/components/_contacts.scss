@@ -1,0 +1,92 @@
+.contacts {
+  padding: 0px 0px 100px;
+  overflow: hidden;
+  &__prev {
+    background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/contacts.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    min-height: 300px;
+  }
+
+  &__content {
+    padding-top: 70px;
+  }
+  &__form {
+    background: $gradient-bg;
+    max-width: 500px;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 4px;
+  }
+  &__form-title {
+    font-size: 23px;
+    text-align: center;
+    color: $white;
+    margin: 20px 0 40px;
+  }
+  &__info {
+  }
+
+  &__title {
+  }
+
+  &__text {
+  }
+
+  .form__input {
+    border-bottom: 3px solid $white;
+    background-color: transparent;
+    font-size: 16px;
+    color: $white;
+  }
+  .form__label {
+    color: $white;
+  }
+  .form__btn {
+    background-color: $dark-blue;
+    color: $white;
+    &:hover {
+      background-color: $grey;
+    }
+  }
+  .form__input:focus + .form__label,
+  .form__input:valid + .form__label {
+    color: $white;
+  }
+  .form__input:focus::placeholder {
+    color: $white;
+  }
+}
+
+@include small-tablet {
+  .contacts {
+    &__prev {
+      min-height: 200px;
+      padding: 60px 0px 10px;
+    }
+    .section-title {
+      padding-top: 120px;
+    }
+  }
+}
+
+@include mobile {
+  .contacts {
+    padding-bottom: 50px;
+    .contacts__form {
+      padding: 20px;
+    }
+    .contacts__form-title {
+      margin: 0 0 20px;
+    }
+    .form__input {
+      border-bottom: 2px solid $white;
+    }
+  }
+}
+

@@ -1,0 +1,69 @@
+.about {
+  overflow: hidden;
+  padding-bottom: 100px;
+  &__prev {
+    background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    min-height: 300px;
+  }
+  &__content {
+    padding-top: 50px;
+  }
+}
+
+.swiper-wrapper {
+  padding-bottom: 50px;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $dark-blue;
+}
+
+@include small-tablet {
+  .about {
+    padding-bottom: 20px;
+    &__prev {
+      min-height: 200px;
+      padding: 60px 0px 10px;
+    }
+    &__content {
+      padding-top: 30px;
+    }
+    .section-title {
+      padding-top: 120px;
+    }
+    .swiper-slide {
+      img {
+        width: 100%;
+      }
+    }
+    .swiper-pagination {
+      display: none;
+    }
+  }
+}
+
+@include mobile {
+  .about {
+    &__content {
+      padding-top: 10px;
+    }
+    .swiper-studies {
+      .swiper-slide {
+        img {
+          height: 400px;
+        }
+      }
+    }
+  }
+}

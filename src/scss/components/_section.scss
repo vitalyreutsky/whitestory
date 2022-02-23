@@ -1,0 +1,21 @@
+.section {
+  &__info {
+    padding: 70px 0px 50px;
+  }
+
+  &__title {
+    @extend .title;
+  }
+
+  &__text {
+    @extend .text;
+  }
+}
+
+@include small-tablet {
+  .section {
+    &__info {
+      padding: 50px 0px 50px;
+    }
+  }
+}

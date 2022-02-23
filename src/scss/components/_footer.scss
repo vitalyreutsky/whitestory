@@ -1,0 +1,135 @@
+.footer {
+  &__content {
+    padding: 10px 0px;
+    background: $gradient-footer-bg;
+  }
+
+  &__copyright {
+    background: $gradient-bg;
+    color: $white;
+    text-align: center;
+    padding: 5px 0px 5px;
+
+    font-size: 13px;
+  }
+  &__icon-phone {
+    width: 20px;
+    height: 20px;
+  }
+  &__icon-email {
+    width: 20px;
+    height: 20px;
+  }
+  &__icon-insta {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.contacts {
+  &__icon {
+    background-color: $dark-blue;
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 0px rgba(36, 52, 65, 0.644);
+    cursor: pointer;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &-row {
+      display: flex;
+      margin-top: 10px;
+    }
+    &-map {
+      display: flex;
+      align-items: center;
+    }
+    &-mark {
+      width: 35px;
+      height: 35px;
+    }
+    &-link {
+      color: inherit;
+      font-weight: 500;
+    }
+    &-adress {
+    }
+    &-item {
+      margin-right: 30px;
+      text-align: left;
+    }
+    &-connection {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    &-phones {
+      display: flex;
+    }
+    &-phone {
+      display: block;
+      color: inherit;
+      font-weight: 500;
+      padding-left: 10px;
+    }
+    &-email {
+      display: flex;
+      align-items: center;
+      a {
+        color: inherit;
+        font-weight: 500;
+        padding-left: 10px;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    a {
+      padding-left: 10px;
+      padding-top: 2px;
+    }
+  }
+}
+
+@include small-tablet {
+  .footer {
+    .contacts {
+      &__inner {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@include mobile-mini {
+  .footer {
+    font-size: 14px;
+    text-align: left;
+    .contacts {
+      &__info-row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &__info-item {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 644px) {
+  .footer {
+    .contacts__social {
+      margin-top: 10px;
+    }
+  }
+}

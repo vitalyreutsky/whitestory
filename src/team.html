@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html', { "title": "Наши врачи" })
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="contacts__inner header__top-connection">
+              <a class="contacts__icon" href="index.html">
+                <picture>
+                  <source srcset="img/logo-dark2.avif" type="image/avif" />
+                  <source srcset="img/logo-dark2.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="img/logo-dark2.png"
+                    class="image"
+                    width="100"
+                    height="100"
+                    alt="logo"
+                  />
+                </picture>
+              </a>
+              <div class="header__info-connection contacts__info-connection">
+                <div
+                  class="contacts__info-phones"
+                  data-da=".menu__list,768,last"
+                >
+                  <svg class="header__icon-phone icon__phone">
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                  <a
+                    class="contacts__info-phone header__info-phone"
+                    href="tel:+375336294094"
+                    >+375 (33) 629-40-94</a
+                  >
+                  <a class="contacts__info-phone" href="tel:+375164594094"
+                    >+375 (1645) 94-0-94</a
+                  >
+                </div>
+                <div
+                  class="contacts__info-email"
+                  data-da=".menu__list,768,last"
+                >
+                  <svg class="header__icon-email">
+                    <use xlink:href="img/sprite.svg#email"></use>
+                  </svg>
+                  <a href="mailto:vreutsky77@mail.ru">whitestory@tut.by</a>
+                </div>
+              </div>
+              <div class="contacts__info-item">
+                <div>‌ПН-ПТ 8.00-20.00</div>
+                <div>СБ 9.00-15.00</div>
+                <div>Воскресенье - выходной</div>
+              </div>
+              <button
+                class="burger"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                data-burger
+              >
+                <span class="burger__line"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__menu">
+              <nav
+                class="menu"
+                data-menu
+                data-da=".header__top-connection,768,1"
+              >
+                <ul class="menu__list">
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="index.html">Главная</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="about.html">О нас</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="price.html">Цены</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a
+                      class="menu__list-link menu__list-link--active"
+                      href="team.html"
+                      >Наши врачи</a
+                    >
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="contacts.html">Контакты</a>
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="vacancies.html"
+                      >Вакансии</a
+                    >
+                  </li>
+                  <li class="menu__list-item">
+                    <a class="menu__list-link" href="information.html"
+                      >Информация</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+
+              <button
+                class="btn-reset form__btn"
+                data-graph-path="modal"
+                data-da=".header__top-connection,768,2"
+              >
+                Записаться на прием
+              </button>
+            </div>
+          </div>
+        </div>
+        @include('partials/modal.html')
+      </header>
+      <main class="main">
+        <section class="section team">
+          <div class="section__prev team__prev">
+            <div class="container">
+              <h2 class="section-title">Наши врачи</h2>
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link"
+                      >White Story</a
+                    >
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a href="team.html" class="breadcrumbs__link">Наши врачи</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="team__content">
+            <div class="container">
+              <div class="team__row">
+                <div class="team__block">
+                  <div
+                    class="team__card"
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
+                  >
+                    <div class="team__photo">
+                      <picture>
+                        <source srcset="img/doctor1.avif" type="image/avif" />
+                        <source srcset="img/doctor1.webp" type="image/webp" />
+                        <img
+                          loading="lazy"
+                          src="img/doctor1.jpg"
+                          class="image"
+                          width="450"
+                          height="600"
+                          alt="photo"
+                        />
+                      </picture>
+                    </div>
+                    <div class="team__info">
+                      <h3 class="team__name">Ковалевич Юрий Павлович</h3>
+                      <h5 class="team__subtitle team__position">
+                        Врач стоматолог-ортопед
+                      </h5>
+                      <h5 class="team__subtitle team__category">
+                        Имеет высшую категорию
+                      </h5>
+                      <h5 class="team__subtitle team__experience">
+                        Стаж работы более 16 лет
+                      </h5>
+
+                      <h4 class="team__info-title">
+                        Образование и достижения:
+                      </h4>
+
+                      <ul class="team__info-list">
+                        <li class="team__info-item">С отличием окончил БГМУ</li>
+                        <li class="team__info-item">
+                          За время учёбы дважды лауреат специального фонда
+                          президента РБ по поддержке одаренных учащихся и
+                          студентов
+                        </li>
+                        <li class="team__info-item">Автор 5 печатных работ</li>
+                        <li class="team__info-item">
+                          Имеет патент на рационализаторское предложение по
+                          определению возраста человека по количеству слоев в
+                          цементе зубов
+                        </li>
+                        <li class="team__info-item">Стажировался в Германии</li>
+                        <li class="team__info-item">
+                          Окончил ординатуру по ортопедической стоматологии в
+                          БГМУ
+                        </li>
+                        <li class="team__info-item">
+                          С 2005 года работал в Ивацевичской ЦРБ, где более 10
+                          лет был заведующим стоматологическим отделением
+                        </li>
+                      </ul>
+                      <p class="team__info-text">
+                        Специалист в области протезирования с использованием
+                        высокоэстетичных безметалловых конструкций (пресс
+                        керамика E-max, керамика с нанесением на диоксид
+                        циркония), металлокерамических конструкций,
+                        протезирования с опорой на дентальные импланты. Большой
+                        опыт ведения пациентов позволяет выполнять сложные
+                        эстетические реставрации.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="team__block">
+                  <div
+                    class="team__card"
+                    data-aos="fade-left"
+                    data-aos-duration="2000"
+                  >
+                    <div class="team__photo">
+                      <picture>
+                        <source srcset="img/doctor2.avif" type="image/avif" />
+                        <source srcset="img/doctor2.webp" type="image/webp" />
+                        <img
+                          loading="lazy"
+                          src="img/doctor2.jpg"
+                          class="image"
+                          width="450"
+                          height="600"
+                          alt="photo"
+                        />
+                      </picture>
+                    </div>
+                    <div class="team__info">
+                      <h3 class="team__name">Артюх Марк Святославович</h3>
+                      <h5 class="team__subtitle team__position">
+                        Врач стоматолог- терапевт
+                      </h5>
+                      <h5 class="team__subtitle team__category">
+                        Имеет вторую категорию
+                      </h5>
+                      <h5 class="team__subtitle team__experience">
+                        Стаж работы более 9 лет
+                      </h5>
+
+                      <h4 class="team__info-title">
+                        Образование и достижения:
+                      </h4>
+
+                      <ul class="team__info-list">
+                        <li class="team__info-item">Окончил БГМУ</li>
+                        <li class="team__info-item">
+                          Интернатуру проходил в Гродненской областной
+                          стоматологической поликлинике там же и работал первые
+                          два года в должности врача стоматолога-терапевта и
+                          детского хирурга.
+                        </li>
+                        <li class="team__info-item">
+                          С 2016 - 2021 года работал в стоматологическом
+                          отделении Ивацевичской ЦРБ врачом
+                          стоматологом-терапевтом и стоматологом- хирургом
+                        </li>
+                      </ul>
+                      <p class="team__info-text">
+                        Успешно проводит эндодонтическое лечение (перелечивание)
+                        в сложных клинических случаях, используя
+                        стоматологический ультразвук, коффердам и другие
+                        современные материалы.
+                        <br />
+                        Опыт работы врача в нескольких стоматологических
+                        специальностях позволяет ему детальнее оценить каждый
+                        конкретный клинический случай.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="team__block">
+                  <div
+                    class="team__card"
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
+                  >
+                    <div class="team__photo">
+                      <picture>
+                        <source srcset="img/doctor3.avif" type="image/avif" />
+                        <source srcset="img/doctor3.webp" type="image/webp" />
+                        <img
+                          loading="lazy"
+                          src="img/doctor3.jpg"
+                          class="image"
+                          width="450"
+                          height="600"
+                          alt="photo"
+                        />
+                      </picture>
+                    </div>
+                    <div class="team__info">
+                      <h3 class="team__name">
+                        Авцинова Кристина Александровна
+                      </h3>
+                      <h5 class="team__subtitle team__position">
+                        Врач стоматолог- терапевт
+                      </h5>
+                      <h5 class="team__subtitle team__category">
+                        Имеет вторую категорию
+                      </h5>
+                      <h5 class="team__subtitle team__experience">
+                        Стаж работы более 5 лет
+                      </h5>
+                      <h4 class="team__info-title">
+                        Образование и достижения:
+                      </h4>
+                      <ul class="team__info-list">
+                        <li class="team__info-item">Окончила БГМУ</li>
+                        <li class="team__info-item">
+                          Интернатуру проходила на базе стоматологического
+                          отделения Ивацевичской ЦРБ
+                        </li>
+                        <li class="team__info-item">
+                          В этой же поликлинике с 2016 года работала детским
+                          стоматологом, стоматологом хирургом и терапевтом
+                        </li>
+                      </ul>
+                      <div class="team__info-text">
+                        Кристина Александровна занимается эстетической
+                        реставрацией зубов современными материалами,
+                        эндодонтическим лечением корневых каналов. Так же
+                        проводит отбеливание и профессиональную гигиену полости
+                        рта. <br />
+                        Регулярно посещает курсы и повышает свои навыки.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

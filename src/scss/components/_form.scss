@@ -1,0 +1,89 @@
+.form {
+  font-family: "Muller", sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 300px;
+  margin: 0 auto;
+
+  &__input-block {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 10px 0;
+    color: $dark-blue;
+    transition: 0.3s;
+  }
+  &__input {
+    font-family: "Muller", sans-serif;
+    outline: none;
+    width: 100%;
+    border: 3px solid $dark-blue;
+
+    padding: 10px;
+
+    border: none;
+    border-bottom: 3px solid $dark-blue;
+
+    font-size: 16px;
+    color: $dark-blue;
+    &::placeholder {
+      font-size: 0;
+    }
+  }
+  &__textarea {
+    resize: none;
+    padding-bottom: 0px;
+  }
+}
+
+.form__input:focus + .form__label,
+.form__input:valid + .form__label {
+  top: -25px;
+  left: 0;
+  font-size: 12px;
+}
+
+.form__input:focus::placeholder {
+  font-size: 10px;
+}
+
+.form__btn {
+  font-family: "Muller", sans-serif;
+  color: $white;
+  background-color: $dark-blue;
+  padding: 10px 17px;
+  border-radius: 4px;
+  font-size: 17px;
+  transition: all 0.3s;
+  text-transform: none;
+
+  box-shadow: 10px 10px 10px 0px rgba(36, 52, 65, 0.644);
+  &:hover {
+    background-color: $light-blue;
+  }
+}
+
+@include small-tablet {
+  .form {
+    &__btn {
+      font-size: 14px;
+    }
+    &__label {
+      font-size: 13px;
+    }
+  }
+
+  .form__input:focus + .form__label,
+  .form__input:valid + .form__label {
+    top: -25px;
+    left: 0;
+    font-size: 11px;
+  }
+}

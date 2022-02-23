@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font-family: "Muller", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $container-offset;
+  max-width: $content-width;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.is-hidden {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  outline: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.breadcrumbs {
+  margin-top: 30px;
+  &__list {
+    display: flex;
+  }
+
+  &__item::after {
+    content: "/";
+    color: $grey;
+    margin-left: -4px;
+    margin-right: 4px;
+  }
+  &__item:last-child::after {
+    display: none;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+    color: $grey;
+  }
+}
+
+@include small-tablet {
+  .breadcrumbs {
+    margin-top: 5px;
+  }
+}
+
+//.scropll-top {
+//  position: fixed;
+//  bottom: 50px;
+//  right: 50px;
+//  width: 60px;
+//  height: 60px;
+//  background-color: red;
+//  border-radius: 50%;
+
+//  z-index: 3;
+//}
