@@ -1241,11 +1241,21 @@ img {
   color: #fff;
 }
 .contacts .contacts__info {
+  color: #4c4957;
   margin-left: 100px;
 }
 .contacts .contacts__social a {
   padding-left: 0;
   padding-right: 10px;
+}
+.contacts .footer__icon-email {
+  fill: #4c4957;
+}
+.contacts .footer__icon-phone {
+  fill: #4c4957;
+}
+.contacts .footer__icon-insta {
+  fill: #4c4957;
 }
 
 @media (max-width: 1024px) {
