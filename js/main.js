@@ -109,6 +109,9 @@ var swiperAbout = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-ab
   clickable: true,
   dynamicBullets: true
 }), _defineProperty(_Swiper, "breakpoints", {
+  280: {
+    slidesPerView: 1
+  },
   320: {
     slidesPerView: 1
   },
@@ -121,12 +124,13 @@ var swiperAbout = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-ab
 }), _Swiper));
 var swiperStudies = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-studies", (_Swiper2 = {
   autoplay: true,
-  slidesPerView: 2.6,
+  slidesPerView: 3,
   slidesPerGroup: 1,
   spaceBetween: 10,
   autoHeight: true,
   freeMode: true,
-  loop: true
+  loop: true,
+  centeredSlides: true
 }, _defineProperty(_Swiper2, "autoplay", {
   delay: 2000
 }), _defineProperty(_Swiper2, "speed", 1500), _defineProperty(_Swiper2, "keyboard", {
@@ -137,6 +141,9 @@ var swiperStudies = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-
   clickable: true,
   dynamicBullets: true
 }), _defineProperty(_Swiper2, "breakpoints", {
+  280: {
+    slidesPerView: 1
+  },
   320: {
     slidesPerView: 1
   },
@@ -144,7 +151,7 @@ var swiperStudies = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-
     slidesPerView: 2
   },
   992: {
-    slidesPerView: 2.3
+    slidesPerView: 3
   }
 }), _Swiper2)); // Подключение анимаций по скроллу
 

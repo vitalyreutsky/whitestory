@@ -571,6 +571,9 @@ img {
   .top__text {
     padding-top: 10px;
   }
+  .top__inner {
+    padding-top: 350px;
+  }
   .top__title {
     font-size: 50px;
     line-height: 1;
@@ -639,12 +642,20 @@ img {
 }
 
 @media (max-width: 768px) {
+  .benefits {
+    padding-bottom: 70px;
+  }
   .benefits__cards {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
   }
   .benefits__cards .image {
     width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .benefits {
+    padding-bottom: 50px;
   }
 }
 .services {
@@ -674,7 +685,9 @@ img {
   position: relative;
   padding: 90px 30px 20px;
   width: 300px;
-  background-color: #4c4957;
+  background: -webkit-gradient(linear, left top, right top, from(#646678), color-stop(#595865), to(#353338));
+  background: -o-linear-gradient(left, #646678, #595865, #353338);
+  background: linear-gradient(90deg, #646678, #595865, #353338);
   color: #fff;
   -webkit-box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
@@ -782,9 +795,10 @@ img {
     padding: 0px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 576px) {
   .services__column {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
   .services__card {
     width: auto;
@@ -818,6 +832,49 @@ img {
   background-color: #4c4957;
 }
 
+.swiper-studies .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+.swiper-studies .about__slide-content {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+  background-color: rgba(54, 56, 56, 0.6);
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.swiper-studies .about__slide-content h1 {
+  font-size: 25px;
+}
+.swiper-studies .about__slide-content .about__slide-text {
+  padding-right: 40px;
+  visibility: hidden;
+  opacity: 0;
+}
+.swiper-studies .about__slide-content .about__slide-text span {
+  font-size: 15px;
+}
+.swiper-studies .about__slide-content .about__slide-text p {
+  font-size: 13px;
+  line-height: 1.3;
+}
+.swiper-studies .swiper-slide-active {
+  opacity: 1;
+}
+.swiper-studies .swiper-slide-active .about__slide-content {
+  height: 90px;
+}
+.swiper-studies .swiper-slide-active .about__slide-text {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 768px) {
   .about {
     padding-bottom: 20px;
@@ -847,47 +904,6 @@ img {
     height: 450px;
   }
 }
-.swiper-studies .swiper-slide {
-  overflow: hidden;
-}
-.swiper-studies .swiper-slide img {
-  position: relative;
-}
-.swiper-studies .about__slide-content {
-  width: 100%;
-  height: 30px;
-  padding: 10px;
-  position: absolute;
-  bottom: 10px;
-  color: #fff;
-  font-size: 20px;
-  background-color: rgba(54, 56, 56, 0.6);
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
-  transition: all 0.7s;
-}
-.swiper-studies .about__slide-content h1 {
-  font-size: 30px;
-}
-.swiper-studies .about__slide-content .about__slide-text {
-  visibility: hidden;
-  opacity: 0;
-}
-.swiper-studies .about__slide-content .about__slide-text span {
-  font-size: 17px;
-}
-.swiper-studies .about__slide-content .about__slide-text p {
-  font-size: 15px;
-  line-height: 1.3;
-}
-.swiper-studies .swiper-slide-active .about__slide-content {
-  height: 70px;
-}
-.swiper-studies .swiper-slide-active .about__slide-text {
-  opacity: 1;
-  visibility: visible;
-}
-
 .price {
   overflow: hidden;
   padding: 0px 0px 100px;
@@ -1329,7 +1345,7 @@ img {
 }
 @media (max-width: 576px) {
   .contacts {
-    padding-bottom: 50px;
+    padding-bottom: 70px;
   }
   .contacts .contacts__form {
     padding: 20px;
@@ -1432,12 +1448,23 @@ img {
   margin: 0 auto 0px;
 }
 
+@media (max-width: 576px) {
+  .title, .section__title {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+}
 .section__info {
   padding: 70px 0px 50px;
 }
 @media (max-width: 768px) {
   .section__info {
     padding: 50px 0px 50px;
+  }
+}
+@media (max-width: 576px) {
+  .section__info {
+    padding: 30px 0px;
   }
 }
 .footer__content {
