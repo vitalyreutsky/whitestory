@@ -96,7 +96,6 @@ var swiperAbout = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-ab
   slidesPerView: 2.6,
   slidesPerGroup: 1,
   spaceBetween: 10,
-  autoHeight: true,
   freeMode: true,
   loop: true
 }, _defineProperty(_Swiper, "autoplay", {
