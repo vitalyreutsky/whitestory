@@ -1,0 +1,35 @@
+.vacancies {
+  padding: 0px 0px 100px;
+  overflow: hidden;
+  &__prev {
+    background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 130px;
+    padding-bottom: 10px;
+  }
+
+  &__content {
+    padding-top: 70px;
+  }
+}
+
+@include small-tablet {
+  .vacancies {
+    &__prev {
+      min-height: 200px;
+      padding: 60px 0px 10px;
+    }
+    .section-title {
+      padding-top: 120px;
+    }
+  }
+}
+
+@include mobile {
+  .vacancies {
+    padding-bottom: 50px;
+  }
+}

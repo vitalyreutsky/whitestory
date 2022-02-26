@@ -1,5 +1,5 @@
 .services {
-  padding: 0px 0px 100px;
+  padding: 0px 0px 70px;
   .section__info {
     padding-top: 0;
   }
@@ -19,8 +19,7 @@
     position: relative;
     padding: 90px 30px 20px;
     width: 300px;
-    //background: $gradient-bg;
-    background-color: $dark-blue;
+    background: $dark-blue;
     color: $white;
 
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
@@ -106,10 +105,11 @@
   }
 }
 
-@include mobile-mini2 {
+@include mobile {
   .services {
     &__column {
-      padding-bottom: 10px;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
     }
     &__card {
       width: auto;

@@ -59,11 +59,18 @@
 
 @include small-tablet {
   .benefits {
+    padding-bottom: 70px;
     &__cards {
       grid-template-columns: repeat(1, 1fr);
       .image {
         width: 100%;
       }
     }
+  }
+}
+
+@include mobile {
+  .benefits {
+    padding-bottom: 50px;
   }
 }

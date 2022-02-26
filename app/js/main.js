@@ -23,6 +23,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/dynamic_adapt */ "./src/js/components/dynamic_adapt.js");
 /* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -42,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_4__);
-var _Swiper;
+var _Swiper, _Swiper2;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -88,13 +91,13 @@ var modal = new graph_modal__WEBPACK_IMPORTED_MODULE_2__["default"](); // Реа
 
 
 swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_3__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_3__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_3__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_3__.Keyboard]);
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper", (_Swiper = {
+var swiperAbout = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-about", (_Swiper = {
   autoplay: true,
   slidesPerView: 2.6,
   slidesPerGroup: 1,
   spaceBetween: 10,
-  autoHeight: true,
-  freeMode: true
+  freeMode: true,
+  loop: true
 }, _defineProperty(_Swiper, "autoplay", {
   delay: 2000
 }), _defineProperty(_Swiper, "speed", 1500), _defineProperty(_Swiper, "keyboard", {
@@ -105,6 +108,9 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper", (_Swi
   clickable: true,
   dynamicBullets: true
 }), _defineProperty(_Swiper, "breakpoints", {
+  280: {
+    slidesPerView: 1
+  },
   320: {
     slidesPerView: 1
   },
@@ -114,8 +120,39 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper", (_Swi
   992: {
     slidesPerView: 3
   }
-}), _Swiper)); //swiper();
-// Подключение анимаций по скроллу
+}), _Swiper));
+var swiperStudies = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-studies", (_Swiper2 = {
+  autoplay: true,
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  spaceBetween: 10,
+  autoHeight: true,
+  freeMode: true,
+  loop: true,
+  centeredSlides: true
+}, _defineProperty(_Swiper2, "autoplay", {
+  delay: 2000
+}), _defineProperty(_Swiper2, "speed", 1500), _defineProperty(_Swiper2, "keyboard", {
+  enabled: true,
+  onlyInViewport: true
+}), _defineProperty(_Swiper2, "pagination", {
+  el: ".swiper-pagination",
+  clickable: true,
+  dynamicBullets: true
+}), _defineProperty(_Swiper2, "breakpoints", {
+  280: {
+    slidesPerView: 1
+  },
+  320: {
+    slidesPerView: 1
+  },
+  480: {
+    slidesPerView: 2
+  },
+  992: {
+    slidesPerView: 3
+  }
+}), _Swiper2)); // Подключение анимаций по скроллу
 
 
 aos__WEBPACK_IMPORTED_MODULE_4___default().init(); // Подключение параллакса блоков при скролле
@@ -374,6 +411,32 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 var da = new DynamicAdapt("max");
 da.init();
+
+/***/ }),
+
+/***/ "./src/js/components/map.js":
+/*!**********************************!*\
+  !*** ./src/js/components/map.js ***!
+  \**********************************/
+/***/ (() => {
+
+function init() {
+  var center = [52.711400033771106, 25.344502181448522];
+  var map = new ymaps.Map("map", {
+    center: center,
+    zoom: 20
+  });
+  var placemark = new ymaps.Placemark(center, {}, {
+    iconLayout: "default#image",
+    iconImageHref: "img/svg/marker.svg",
+    iconImageSize: [30, 30],
+    iconImageOffset: [-17, -30]
+  });
+  map.geoObjects.add(placemark);
+}
+
+ymaps.ready(init);
+console.log("map");
 
 /***/ }),
 

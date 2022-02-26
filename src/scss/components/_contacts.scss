@@ -7,16 +7,18 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    min-height: 300px;
+    padding-top: 130px;
+    padding-bottom: 10px;
   }
 
   &__content {
     padding-top: 70px;
   }
+  &__information {
+    display: flex;
+  }
   &__form {
+    flex: 1 0 50%;
     background: $gradient-bg;
     max-width: 500px;
     margin-bottom: 50px;
@@ -28,14 +30,6 @@
     text-align: center;
     color: $white;
     margin: 20px 0 40px;
-  }
-  &__info {
-  }
-
-  &__title {
-  }
-
-  &__text {
   }
 
   .form__input {
@@ -61,6 +55,34 @@
   .form__input:focus::placeholder {
     color: $white;
   }
+
+  .contacts__info {
+    color: $dark-blue;
+    margin-left: 100px;
+  }
+  .contacts__social {
+    a {
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  }
+  .footer__icon-email {
+    fill: $dark-blue;
+  }
+  .footer__icon-phone {
+    fill: $dark-blue;
+  }
+  .footer__icon-insta {
+    fill: $dark-blue;
+  }
+}
+
+@include tablet {
+  .contacts {
+    .contacts__info-row {
+      flex-direction: column;
+    }
+  }
 }
 
 @include small-tablet {
@@ -72,12 +94,20 @@
     .section-title {
       padding-top: 120px;
     }
+    &__information {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 50px;
+    }
+    .contacts__info {
+      margin-left: 0;
+    }
   }
 }
 
 @include mobile {
   .contacts {
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     .contacts__form {
       padding: 20px;
     }
@@ -89,4 +119,3 @@
     }
   }
 }
-

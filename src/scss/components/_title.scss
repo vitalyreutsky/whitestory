@@ -24,3 +24,10 @@
   max-width: 730px;
   margin: 0 auto 0px;
 }
+
+@include mobile {
+  .title {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+}

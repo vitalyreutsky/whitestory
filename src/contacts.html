@@ -146,51 +146,106 @@
             data-aos-duration="2000"
           >
             <div class="container">
-              <div class="contacts__form">
-                <h4 class="contacts__form-title">Напишите нам</h4>
-                <form action="#" class="form">
-                  <div class="form__input-block">
-                    <input
-                      class="input-reset form__input"
-                      type="text"
-                      name="Имя"
-                      id="contacts-name"
-                      required
-                    />
-                    <label class="form__label" for="contacts-name"
-                      >Введите ваше имя</label
-                    >
-                  </div>
-                  <div class="form__input-block">
-                    <input
-                      class="input-reset form__input"
-                      type="text"
-                      name="Имя"
-                      id="contacts-phone"
-                      placeholder="маска"
-                      required
-                    />
-                    <label class="form__label" for="contacts-phone"
-                      >Введите ваш номер телефона</label
-                    >
-                  </div>
+              <div class="contacts__information">
+                <div class="contacts__form">
+                  <h4 class="contacts__form-title">Напишите нам</h4>
+                  <form action="#" class="form">
+                    <div class="form__input-block">
+                      <input
+                        class="input-reset form__input"
+                        type="text"
+                        name="Имя"
+                        id="contacts-name"
+                        required
+                      />
+                      <label class="form__label" for="contacts-name"
+                        >Введите ваше имя</label
+                      >
+                    </div>
+                    <div class="form__input-block">
+                      <input
+                        class="input-reset form__input"
+                        type="text"
+                        name="Имя"
+                        id="contacts-phone"
+                        placeholder="маска"
+                        required
+                      />
+                      <label class="form__label" for="contacts-phone"
+                        >Введите ваш номер телефона</label
+                      >
+                    </div>
 
-                  <div class="form__input-block">
-                    <textarea
-                      class="input-reset form__input form__textarea"
-                      type="text"
-                      name="Сообщение"
-                      id="contacts-message"
-                      required
-                    ></textarea>
-                    <label
-                      class="form__label form__textarea-label"
-                      for="contacts-message"
-                      >Введите ваше сообщение</label
-                    >
+                    <div class="form__input-block">
+                      <textarea
+                        class="input-reset form__input form__textarea"
+                        type="text"
+                        name="Сообщение"
+                        id="contacts-message"
+                        required
+                      ></textarea>
+                      <label
+                        class="form__label form__textarea-label"
+                        for="contacts-message"
+                        >Введите ваше сообщение</label
+                      >
+                    </div>
+                    <button class="btn-reset form__btn">Отправить</button>
+                  </form>
+                </div>
+                <div class="contacts__info">
+                  <h3 class="contacts__info-title">Контактная информация:</h3>
+                  <div class="contacts__info-adress">
+                    г.Ивацевичи, ул.Советская, д.1а, пом.17 (2 этаж)
                   </div>
-                  <button class="btn-reset form__btn">Отправить</button>
-                </form>
+                  <div class="contacts__info-row">
+                    <div class="contacts__info-item">
+                      <h5 class="contacts__info-timetable">Режим работы:</h5>
+                      <div>‌Пн-Пт 8.00-20.00</div>
+                      <div>Сб 9.00-15.00</div>
+                      <div>Воскресенье - выходной</div>
+                    </div>
+                    <div class="contacts__info-connection">
+                      <h5 class="contacts__info-title">Связаться с нами:</h5>
+                      <div class="contacts__info-phones">
+                        <svg class="footer__icon-phone">
+                          <use xlink:href="img/sprite.svg#phone"></use>
+                        </svg>
+                        <div>
+                          <a
+                            class="contacts__info-phone"
+                            href="tel:+375336294094"
+                            >+375 (33) 629-40-94</a
+                          >
+                          <a
+                            class="contacts__info-phone"
+                            href="tel:+375164594094"
+                            >+375 (1645) 94-0-94</a
+                          >
+                        </div>
+                      </div>
+                      <div class="contacts__info-email">
+                        <svg class="footer__icon-email">
+                          <use xlink:href="img/sprite.svg#email"></use>
+                        </svg>
+                        <a href="mailto:vreutsky77@mail.ru"
+                          >whitestory@tut.by</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contacts__social">
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/whitestory.by"
+                    >
+                      <svg class="footer__icon-insta">
+                        <use xlink:href="img/sprite.svg#insta"></use>
+                      </svg>
+                    </a>
+                    <h5 class="contacts__info-title">Мы в instagram</h5>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="map" class="map"></div>
@@ -199,5 +254,6 @@
       </main>
       @include('partials/footer.html')
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=03207180-c983-4016-b49f-4164475b0088&lang=ru_RU"></script>
   </body>
 </html>

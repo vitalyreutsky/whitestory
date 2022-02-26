@@ -7,13 +7,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    min-height: 300px;
-  }
-  &__content {
-    padding-top: 50px;
+    padding-top: 130px;
+    padding-bottom: 10px;
   }
 }
 
@@ -29,9 +24,53 @@
   background-color: $dark-blue;
 }
 
+.swiper-studies {
+  .swiper-slide {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about__slide-content {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    color: $white;
+    font-size: 20px;
+    background-color: rgba($black, 0.6);
+    transition: all 0.7s;
+    h1 {
+      font-size: 25px;
+    }
+    .about__slide-text {
+      padding-right: 40px;
+      visibility: hidden;
+      opacity: 0;
+      span {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.3;
+      }
+    }
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+  }
+  .swiper-slide-active .about__slide-content {
+    height: 90px;
+  }
+  .swiper-slide-active .about__slide-text {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 @include small-tablet {
   .about {
-    padding-bottom: 20px;
     &__prev {
       min-height: 200px;
       padding: 60px 0px 10px;
@@ -55,13 +94,22 @@
 
 @include mobile {
   .about {
+    padding-bottom: 70px;
     &__content {
       padding-top: 10px;
     }
+    .swiper-about {
+      height: 400px;
+      margin-bottom: 30px;
+    }
     .swiper-studies {
+      height: 450px;
+      .section__info {
+        padding-top: 0;
+      }
       .swiper-slide {
         img {
-          height: 400px;
+          height: 450px;
         }
       }
     }
