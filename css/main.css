@@ -787,12 +787,10 @@ img {
   color: #dfdfdf;
 }
 
-@media (max-width: 768px) {
-  .services {
-    padding: 0px;
-  }
-}
 @media (max-width: 576px) {
+  .services {
+    padding-bottom: 20px;
+  }
   .services__column {
     padding-bottom: 30px;
     margin-bottom: 30px;
@@ -1277,8 +1275,8 @@ img {
 .contacts .form__input {
   border-bottom: 3px solid #fff;
   background-color: transparent;
-  font-size: 16px;
-  color: #fff;
+  font-size: 13px;
+  color: #dfdfdf;
 }
 .contacts .form__label {
   color: #fff;
