@@ -191,6 +191,17 @@ var rules1 = [{
     value: true,
     errorMessage: "Заполните телефон!"
   }]
+}, {
+  ruleSelector: ".form__textarea",
+  rules: [{
+    rule: "minLength",
+    value: 3,
+    errorMessage: "Введите минимум 3 символов"
+  }, {
+    rule: "required",
+    value: true,
+    errorMessage: "Введите сообщение"
+  }]
 }];
 var rules2 = [{
   ruleSelector: ".form__input-name",
@@ -216,10 +227,8 @@ var rules2 = [{
 
 var afterForm = function afterForm() {
   console.log("Произошла отправка, тут можно писать любые действия");
-};
-
-(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__.validateForms)(".form-1", rules1, afterForm);
-(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__.validateForms)(".form-2", rules2, afterForm);
+}; //validateForms(".form-1", rules1, afterForm);
+//validateForms(".form-2", rules2, afterForm);
 
 /***/ }),
 
