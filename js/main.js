@@ -227,8 +227,10 @@ var rules2 = [{
 
 var afterForm = function afterForm() {
   console.log("Произошла отправка, тут можно писать любые действия");
-}; //validateForms(".form-1", rules1, afterForm);
-//validateForms(".form-2", rules2, afterForm);
+};
+
+(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__.validateForms)(".form-1", rules1, afterForm);
+(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__.validateForms)(".form-2", rules2, afterForm);
 
 /***/ }),
 
