@@ -680,9 +680,8 @@ var validateForms = function validateForms(selector, rules, afterSend) {
 
   telSelector.forEach(function (tel) {
     if (tel) {
-      //const inputMask = new Inputmask("+375 (99) 999-99-99");
-      //inputMask.mask(tel);
-      inputmask__WEBPACK_IMPORTED_MODULE_1___default()("9-a{1,3}9{1,3}").mask(tel);
+      var inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())("+375 (99) 999-99-99");
+      inputMask.mask(tel);
 
       var _iterator = _createForOfIteratorHelper(rules),
           _step;
