@@ -669,7 +669,7 @@ var validateForms = function validateForms(selector, rules, afterSend) {
             rule: "function",
             validator: function validator() {
               var phone = telSelector.inputmask.unmaskedvalue();
-              return phone.length === 9;
+              return Number(phone) && phone.length === 9;
             },
             errorMessage: item.telError
           });
