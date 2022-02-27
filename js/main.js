@@ -174,10 +174,6 @@ aos__WEBPACK_IMPORTED_MODULE_4___default().init(); // Подключение п�
 var rules1 = [{
   ruleSelector: ".form__input-name",
   rules: [{
-    rule: "customRegexp",
-    value: /^(?![\d+_@.-]+$)[a-zA-Z0-9+_@.-]*$/,
-    errorMessage: "Введите только буквы"
-  }, {
     rule: "minLength",
     value: 3,
     errorMessage: "Введите минимум 3 символов"
@@ -684,8 +680,9 @@ var validateForms = function validateForms(selector, rules, afterSend) {
 
   telSelector.forEach(function (tel) {
     if (tel) {
-      var inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())("+375 (99) 999-99-99");
-      inputMask.mask(tel);
+      //const inputMask = new Inputmask("+375 (99) 999-99-99");
+      //inputMask.mask(tel);
+      inputmask__WEBPACK_IMPORTED_MODULE_1___default()("9-a{1,3}9{1,3}").mask(tel);
 
       var _iterator = _createForOfIteratorHelper(rules),
           _step;
@@ -699,23 +696,6 @@ var validateForms = function validateForms(selector, rules, afterSend) {
               rule: "function",
               validator: function validator() {
                 var phone = tel.inputmask.unmaskedvalue();
-
-                for (var i = 0; i < tel.length; i++) {
-                  tel[i].oninput = function () {
-                    dpcm(this);
-                  };
-                }
-
-                function dpcm(input) {
-                  var value = input.value;
-                  var re = /[^0-9\-\(\)\+\ ]/gi;
-
-                  if (re.test(value)) {
-                    value = value.replace(re, "");
-                    input.value = value;
-                  }
-                }
-
                 return phone.length === 9;
               },
               errorMessage: item.telError
