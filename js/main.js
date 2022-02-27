@@ -175,7 +175,7 @@ var rules1 = [{
   ruleSelector: ".form__input-name",
   rules: [{
     rule: "customRegexp",
-    value: /^(?![\d+_@.-]+$)[a-zA-Z0-9+_@.-]*$/,
+    value: /^[A-zА-яЁё]+$/,
     errorMessage: "Введите только буквы"
   }, {
     rule: "minLength",
