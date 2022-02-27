@@ -182,22 +182,25 @@ var rules1 = [{
     value: true,
     errorMessage: "Заполните имя!"
   }]
-}, {
-  ruleSelector: ".form__input-tel",
-  tel: true,
-  telError: "Введите корректный телефон",
-  rules: [{
-    rule: "required",
-    value: true,
-    errorMessage: "Заполните телефон!"
-  }]
-}];
+} //  {
+//    ruleSelector: ".form__input-tel",
+//    telError: "Введите корректный телефон",
+//    rules: [
+//      {
+//        rule: "required",
+//        value: true,
+//        errorMessage: "Заполните телефон!",
+//      },
+//    ],
+//  },
+];
 
 var afterForm = function afterForm() {
   console.log("Произошла отправка, тут можно писать любые действия");
 };
 
 (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__.validateForms)(".form-1", rules1, afterForm);
+(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__.validateForms)(".form-2", rules1, afterForm);
 
 /***/ }),
 
@@ -444,23 +447,26 @@ da.init();
   \**********************************/
 /***/ (() => {
 
-function init() {
-  var center = [52.711400033771106, 25.344502181448522];
-  var map = new ymaps.Map("map", {
-    center: center,
-    zoom: 20
-  });
-  var placemark = new ymaps.Placemark(center, {}, {
-    iconLayout: "default#image",
-    iconImageHref: "img/svg/marker.svg",
-    iconImageSize: [30, 30],
-    iconImageOffset: [-17, -30]
-  });
-  map.geoObjects.add(placemark);
-}
-
-ymaps.ready(init);
-console.log("map");
+//function init() {
+//  let center = [52.711400033771106, 25.344502181448522];
+//  let map = new ymaps.Map("map", {
+//    center: center,
+//    zoom: 20,
+//  });
+//  let placemark = new ymaps.Placemark(
+//    center,
+//    {},
+//    {
+//      iconLayout: `default#image`,
+//      iconImageHref: "img/svg/marker.svg",
+//      iconImageSize: [30, 30],
+//      iconImageOffset: [-17, -30],
+//    }
+//  );
+//  map.geoObjects.add(placemark);
+//}
+//ymaps.ready(init);
+//console.log("map");
 
 /***/ }),
 

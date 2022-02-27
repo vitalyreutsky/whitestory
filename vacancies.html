@@ -152,24 +152,30 @@
         </h4>
       </div>
     </div>
-    <form action="#" class="form-modal">
+    <form
+      action="#"
+      class="form-modal form-2"
+      method="POST"
+      enctype="multipart/form-data"
+    >
       <div class="form__input-block">
         <input
-          class="input-reset form__input"
+          class="input-reset form__input form__input-name"
           type="text"
           name="Имя"
           id="modal-name"
+          maxlength="15"
           required
         />
         <label class="form__label" for="modal-name">Введите ваше имя</label>
       </div>
       <div class="form__input-block">
         <input
-          class="input-reset form__input"
+          class="input-reset form__input form__input-tel"
           type="tel"
-          name="Имя"
-          id="modal-phone"
+          name="Телефон"
           placeholder="Введите ваш номер телефона"
+          id="modal-phone"
           required
         />
         <label class="form__label" for="modal-phone"
