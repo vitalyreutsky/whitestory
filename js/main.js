@@ -174,6 +174,10 @@ aos__WEBPACK_IMPORTED_MODULE_4___default().init(); // Подключение п�
 var rules1 = [{
   ruleSelector: ".form__input-name",
   rules: [{
+    rule: "customRegexp",
+    value: /^(?![\d+_@.-]+$)[a-zA-Z0-9+_@.-]*$/,
+    errorMessage: "Введите только буквы"
+  }, {
     rule: "minLength",
     value: 3,
     errorMessage: "Введите минимум 3 символов"
@@ -190,20 +194,6 @@ var rules1 = [{
     rule: "required",
     value: true,
     errorMessage: "Заполните телефон!"
-  }, {
-    rule: "number",
-    errorMessage: "Введите только цифры"
-  }]
-}, {
-  ruleSelector: ".form__textarea",
-  rules: [{
-    rule: "minLength",
-    value: 3,
-    errorMessage: "Введите минимум 3 символов"
-  }, {
-    rule: "required",
-    value: true,
-    errorMessage: "Введите сообщение"
   }]
 }];
 var rules2 = [{
