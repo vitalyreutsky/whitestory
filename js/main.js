@@ -182,25 +182,44 @@ var rules1 = [{
     value: true,
     errorMessage: "Заполните имя!"
   }]
-} //  {
-//    ruleSelector: ".form__input-tel",
-//    telError: "Введите корректный телефон",
-//    rules: [
-//      {
-//        rule: "required",
-//        value: true,
-//        errorMessage: "Заполните телефон!",
-//      },
-//    ],
-//  },
-];
+}, {
+  ruleSelector: ".form__input-tel",
+  tel: true,
+  telError: "Введите корректный телефон",
+  rules: [{
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните телефон!"
+  }]
+}];
+var rules2 = [{
+  ruleSelector: ".form__input-name",
+  rules: [{
+    rule: "minLength",
+    value: 3,
+    errorMessage: "Введите минимум 3 символов"
+  }, {
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните имя!"
+  }]
+}, {
+  ruleSelector: ".form__input-tel",
+  tel: true,
+  telError: "Введите корректный телефон",
+  rules: [{
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните телефон!"
+  }]
+}];
 
 var afterForm = function afterForm() {
   console.log("Произошла отправка, тут можно писать любые действия");
 };
 
 (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__.validateForms)(".form-1", rules1, afterForm);
-(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__.validateForms)(".form-2", rules1, afterForm);
+(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__.validateForms)(".form-2", rules2, afterForm);
 
 /***/ }),
 
@@ -647,7 +666,7 @@ var validateForms = function validateForms(selector, rules, afterSend) {
   var _document;
 
   var form = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector(selector);
-  var telSelector = form === null || form === void 0 ? void 0 : form.querySelector('input[type="tel"]');
+  var telSelector = form === null || form === void 0 ? void 0 : form.querySelectorAll(".form__input-tel");
 
   if (!form) {
     console.error("Нет такого селектора!");
@@ -659,35 +678,36 @@ var validateForms = function validateForms(selector, rules, afterSend) {
     return false;
   }
 
-  if (telSelector) {
-    var inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())("+375 (99) 999-99-99");
-    inputMask.mask(telSelector);
+  telSelector.forEach(function (tel) {
+    if (tel) {
+      var inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())("+375 (99) 999-99-99");
+      inputMask.mask(tel);
 
-    var _iterator = _createForOfIteratorHelper(rules),
-        _step;
+      var _iterator = _createForOfIteratorHelper(rules),
+          _step;
 
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var item = _step.value;
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var item = _step.value;
 
-        if (item.tel) {
-          item.rules.push({
-            rule: "function",
-            validator: function validator() {
-              var phone = telSelector.inputmask.unmaskedvalue();
-              return Number(phone) && phone.length === 9;
-            },
-            errorMessage: item.telError
-          });
+          if (item.tel) {
+            item.rules.push({
+              rule: "function",
+              validator: function validator() {
+                var phone = tel.inputmask.unmaskedvalue();
+                return phone.length === 9;
+              },
+              errorMessage: item.telError
+            });
+          }
         }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
       }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
     }
-  }
-
+  });
   var validation = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](selector);
 
   var _iterator2 = _createForOfIteratorHelper(rules),
@@ -695,8 +715,8 @@ var validateForms = function validateForms(selector, rules, afterSend) {
 
   try {
     for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-      var _item = _step2.value;
-      validation.addField(_item.ruleSelector, _item.rules);
+      var item = _step2.value;
+      validation.addField(item.ruleSelector, item.rules);
     }
   } catch (err) {
     _iterator2.e(err);
