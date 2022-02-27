@@ -699,6 +699,23 @@ var validateForms = function validateForms(selector, rules, afterSend) {
               rule: "function",
               validator: function validator() {
                 var phone = tel.inputmask.unmaskedvalue();
+
+                for (var i = 0; i < tel.length; i++) {
+                  tel[i].oninput = function () {
+                    dpcm(this);
+                  };
+                }
+
+                function dpcm(input) {
+                  var value = input.value;
+                  var re = /[^0-9\-\(\)\+\ ]/gi;
+
+                  if (re.test(value)) {
+                    value = value.replace(re, "");
+                    input.value = value;
+                  }
+                }
+
                 return phone.length === 9;
               },
               errorMessage: item.telError
