@@ -190,6 +190,9 @@ var rules1 = [{
     rule: "required",
     value: true,
     errorMessage: "Заполните телефон!"
+  }, {
+    rule: "number",
+    errorMessage: "Введите только цифры"
   }]
 }, {
   ruleSelector: ".form__textarea",
