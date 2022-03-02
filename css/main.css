@@ -856,7 +856,8 @@ img {
   font-size: 15px;
 }
 .swiper-studies .about__slide-content .about__slide-text p {
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: bold;
   line-height: 1.3;
 }
 .swiper-studies .swiper-slide-active {
