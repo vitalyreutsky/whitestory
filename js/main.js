@@ -46,7 +46,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _functions_validate_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/validate-forms */ "./src/js/functions/validate-forms.js");
-var _Swiper;
+var _Swiper, _Swiper2;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -122,43 +122,38 @@ var swiperAbout = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-ab
     slidesPerView: 3
   }
 }), _Swiper));
-var swiperStudies = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-studies", {
-  //  autoplay: true,
+var swiperStudies = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"](".swiper-studies", (_Swiper2 = {
+  autoplay: true,
   slidesPerView: 3,
   slidesPerGroup: 1,
   spaceBetween: 10,
   autoHeight: true,
   freeMode: true,
   loop: true,
-  centeredSlides: true,
-  //  autoplay: {
-  //    delay: 2000,
-  //  },
-  speed: 1500,
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true
+  centeredSlides: true
+}, _defineProperty(_Swiper2, "autoplay", {
+  delay: 2000
+}), _defineProperty(_Swiper2, "speed", 1500), _defineProperty(_Swiper2, "keyboard", {
+  enabled: true,
+  onlyInViewport: true
+}), _defineProperty(_Swiper2, "pagination", {
+  el: ".swiper-pagination",
+  clickable: true,
+  dynamicBullets: true
+}), _defineProperty(_Swiper2, "breakpoints", {
+  280: {
+    slidesPerView: 1
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true
+  320: {
+    slidesPerView: 1
   },
-  breakpoints: {
-    280: {
-      slidesPerView: 1
-    },
-    320: {
-      slidesPerView: 1
-    },
-    480: {
-      slidesPerView: 2
-    },
-    992: {
-      slidesPerView: 3
-    }
+  480: {
+    slidesPerView: 2
+  },
+  992: {
+    slidesPerView: 3
   }
-}); // Подключение анимаций по скроллу
+}), _Swiper2)); // Подключение анимаций по скроллу
 
 
 aos__WEBPACK_IMPORTED_MODULE_4___default().init(); // Подключение параллакса блоков при скролле
