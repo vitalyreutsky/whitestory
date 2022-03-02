@@ -23,9 +23,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/dynamic_adapt */ "./src/js/components/dynamic_adapt.js");
 /* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
-/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 
@@ -475,35 +472,6 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 var da = new DynamicAdapt("max");
 da.init();
-
-/***/ }),
-
-/***/ "./src/js/components/map.js":
-/*!**********************************!*\
-  !*** ./src/js/components/map.js ***!
-  \**********************************/
-/***/ (() => {
-
-//function init() {
-//  let center = [52.711400033771106, 25.344502181448522];
-//  let map = new ymaps.Map("map", {
-//    center: center,
-//    zoom: 20,
-//  });
-//  let placemark = new ymaps.Placemark(
-//    center,
-//    {},
-//    {
-//      iconLayout: `default#image`,
-//      iconImageHref: "img/svg/marker.svg",
-//      iconImageSize: [30, 30],
-//      iconImageOffset: [-17, -30],
-//    }
-//  );
-//  map.geoObjects.add(placemark);
-//}
-//ymaps.ready(init);
-//console.log("map");
 
 /***/ }),
 
