@@ -41,7 +41,7 @@ try {
    $mail->setFrom('vreutsky77@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
    // Получатель письма
-   $mail->addAddress('vreutsky77@mail.ru');
+   $mail->addAddress('whitestory@tut.by');
 
    // Отправка сообщения
    $mail->isHTML(true);
