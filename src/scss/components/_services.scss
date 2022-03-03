@@ -99,14 +99,9 @@
   color: $grey;
 }
 
-@include small-tablet {
-  .services {
-    padding: 0px;
-  }
-}
-
 @include mobile {
   .services {
+    padding-bottom: 20px;
     &__column {
       padding-bottom: 30px;
       margin-bottom: 30px;

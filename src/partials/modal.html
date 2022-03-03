@@ -10,30 +10,34 @@
       aria-label="Закрыть модальное окно"
     ></button>
     <div class="graph-modal__content">
-      <div class="graph-modal__content">
-        <h4 class="graph-modal__title">
-          Заполните заявку и мы скоро с вами свяжемся
-        </h4>
-      </div>
+      <h4 class="graph-modal__title">
+        Заполните вашу заявку
+      </h4>
     </div>
-    <form action="#" class="form-modal">
+    <form
+      action="#"
+      class="form-modal form form-2"
+      method="POST"
+      enctype="multipart/form-data"
+    >
       <div class="form__input-block">
         <input
-          class="input-reset form__input"
+          class="input-reset form__input form__input-name"
           type="text"
           name="Имя"
           id="modal-name"
+          maxlength="15"
           required
         />
         <label class="form__label" for="modal-name">Введите ваше имя</label>
       </div>
       <div class="form__input-block">
         <input
-          class="input-reset form__input"
-          type="text"
-          name="Имя"
+          class="input-reset form__input form__input-tel"
+          type="tel"
+          name="Телефон"
+          placeholder="Ваш номер телефона"
           id="modal-phone"
-          placeholder="маска"
           required
         />
         <label class="form__label" for="modal-phone"
@@ -43,4 +47,23 @@
       <button class="btn-reset form__btn">Отправить</button>
     </form>
   </div>
+
+  <div
+    class="graph-modal__container"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal-success"
+  >
+    <button
+      class="btn-reset graph-modal__close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content">
+      <h4 class="graph-modal__title">
+        Спасибо! Скоро мы с вами свяжемся.
+      </h4>
+    </div>
+  </div>
 </div>
+
+<!-- modal-success -->
