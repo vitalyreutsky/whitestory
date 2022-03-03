@@ -1846,4 +1846,30 @@ img {
     height: 300px;
   }
 }
+.scroll-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: #4c4957;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.scroll-btn img {
+  fill: #fff;
+}
+.scroll-btn:active {
+  background: -webkit-gradient(linear, left top, right top, from(#646678), color-stop(#595865), to(#353338));
+  background: -o-linear-gradient(left, #646678, #595865, #353338);
+  background: linear-gradient(90deg, #646678, #595865, #353338);
+}
 /*# sourceMappingURL=main.css.map */
