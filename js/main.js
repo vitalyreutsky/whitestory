@@ -19,12 +19,15 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/dynamic_adapt */ "./src/js/components/dynamic_adapt.js");
-/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
-/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_scrollingHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/scrollingHeader */ "./src/js/components/scrollingHeader.js");
+/* harmony import */ var _components_scrollingHeader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_scrollingHeader__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/dynamic_adapt */ "./src/js/components/dynamic_adapt.js");
+/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -499,6 +502,20 @@ btnScrollToTop.addEventListener("click", function () {
     top: 0,
     behavior: "smooth"
   });
+});
+
+/***/ }),
+
+/***/ "./src/js/components/scrollingHeader.js":
+/*!**********************************************!*\
+  !*** ./src/js/components/scrollingHeader.js ***!
+  \**********************************************/
+/***/ (() => {
+
+window.addEventListener("scroll", function () {
+  var header = document.querySelector(".header__bottom");
+  var headerTop = document.querySelector(".header__top");
+  header.classList.toggle("scrolling-active", window.scrollY > 490);
 });
 
 /***/ }),
