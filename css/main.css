@@ -865,6 +865,10 @@ img {
 }
 .swiper-studies .swiper-slide-active .about__slide-content {
   height: 90px;
+  overflow-y: scroll;
+}
+.swiper-studies .swiper-slide-active .big-content {
+  height: 120px;
 }
 .swiper-studies .swiper-slide-active .about__slide-text {
   opacity: 1;
