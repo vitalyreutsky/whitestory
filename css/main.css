@@ -538,7 +538,7 @@ img {
   padding-top: 250px;
 }
 .top__title {
-  letter-spacing: 6px;
+  letter-spacing: 3px;
   font-size: 110px;
   line-height: 105px;
   color: #fff;
@@ -571,7 +571,7 @@ img {
 }
 @media (max-width: 471px) {
   .top__background-img {
-    min-height: 650px;
+    min-height: 600px;
   }
   .top__title {
     padding-bottom: 10px;
@@ -1444,7 +1444,7 @@ img {
   text-align: center;
   color: #4c4957;
   font-size: 35px;
-  line-height: 51px;
+  line-height: 50px;
   padding-bottom: 25px;
   margin-bottom: 25px;
   position: relative;
@@ -1462,7 +1462,9 @@ img {
 }
 
 .text, .section__text {
-  font-size: 20px;
+  color: #4c4957;
+  line-height: 1.2;
+  font-size: 18px;
   text-align: center;
   max-width: 730px;
   margin: 0 auto 0px;
@@ -1470,8 +1472,12 @@ img {
 
 @media (max-width: 576px) {
   .title, .section__title {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .title::after, .section__title::after {
+    width: 100px;
   }
 }
 .section__info {
