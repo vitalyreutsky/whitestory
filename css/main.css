@@ -562,6 +562,7 @@ img {
 
 @media (max-width: 768px) {
   .top__title {
+    letter-spacing: 2px;
     font-size: 80px;
     line-height: 1;
   }
@@ -575,6 +576,9 @@ img {
   }
   .top__title {
     padding-bottom: 10px;
+  }
+  .top__title::after {
+    width: 150px;
   }
   .top__text {
     padding-top: 10px;
@@ -610,8 +614,8 @@ img {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 10px 10px 60px 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 10px 40px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1474,7 +1478,7 @@ img {
   .title, .section__title {
     padding-bottom: 5px;
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 27px;
   }
   .title::after, .section__title::after {
     width: 100px;
@@ -1604,7 +1608,6 @@ img {
   color: inherit;
   font-weight: 500;
   padding-left: 10px;
-  font-size: 18px;
 }
 .contacts__social {
   display: -webkit-box;
