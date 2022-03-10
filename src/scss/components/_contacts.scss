@@ -1,6 +1,5 @@
 .contacts {
   padding: 0px 0px 100px;
-  overflow: hidden;
   &__prev {
     background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/contacts.jpg");
     background-position: center;
@@ -39,13 +38,6 @@
   }
   .form__label {
     color: $white;
-  }
-  .form__btn {
-    background-color: $dark-blue;
-    color: $white;
-    &:hover {
-      background-color: $grey;
-    }
   }
   .form__input:focus + .form__label,
   .form__input:valid + .form__label {

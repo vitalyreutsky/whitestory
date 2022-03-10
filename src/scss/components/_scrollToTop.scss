@@ -1,0 +1,59 @@
+.scroll-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: $dark-blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transition-duration: 0.2s;
+  transition-timing-function: ease ease-in-out;
+  transition-property: background-color, color;
+  img {
+    fill: $white;
+  }
+  &:hover,
+  &:active {
+    background: $gradient-bg;
+  }
+}
+
+//animation
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+/* fadeInUp */
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: btnExit;
+}
+
+/* fadeOutDown */
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}

@@ -26,7 +26,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 10px;
+    padding: 20px 0px;
   }
   &__btn {
     background-color: transparent;
@@ -66,7 +66,7 @@
     }
   }
   &__list-link {
-    padding-top: 10px;
+    // padding-top: 10px;
     color: $grey;
     font-weight: 700;
     line-height: 22px;
@@ -90,12 +90,12 @@
   }
   &__list-link--active {
     color: $white;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
     position: relative;
     &::after {
       content: "";
       position: absolute;
-      bottom: -2px;
+      bottom: 0px;
       left: 0;
       right: 0;
 
@@ -105,6 +105,10 @@
       background-color: $white;
     }
   }
+}
+
+.scrolling-active {
+  background-color: $dark-blue;
 }
 
 .burger {

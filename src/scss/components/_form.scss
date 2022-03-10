@@ -66,7 +66,8 @@
 
   box-shadow: 10px 10px 10px 0px rgba(36, 52, 65, 0.644);
   &:hover {
-    background-color: $light-blue;
+    background-color: $grey;
+    color: $dark-blue;
   }
 }
 
