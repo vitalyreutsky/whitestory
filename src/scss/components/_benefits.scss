@@ -7,7 +7,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
   }
-
   &__item {
     position: relative;
     &-info {
@@ -17,11 +16,9 @@
       right: 0;
       left: 0;
 
-      //width: 100%;
+      background-color: rgba($white, 0.7);
 
-      background-color: rgba($white, 0.6);
-
-      padding: 10px 10px 60px 10px;
+      padding: 10px 10px 40px 10px;
 
       display: flex;
       flex-direction: column;
@@ -29,8 +26,10 @@
       justify-content: flex-end;
     }
     &-title {
-      font-size: 20px;
+      font-size: 23px;
+      text-transform: uppercase;
       line-height: 25px;
+      color: $dark-blue;
 
       padding-bottom: 20px;
       margin-bottom: 20px;
@@ -43,7 +42,7 @@
         left: 0;
         right: 0;
 
-        width: 60%;
+        width: 100px;
         height: 2px;
         margin: 0 auto;
 
@@ -52,7 +51,8 @@
     }
     &-text {
       font-weight: 300;
-      font-size: 14px;
+      font-size: 17px;
+      line-height: 24px;
     }
   }
 }

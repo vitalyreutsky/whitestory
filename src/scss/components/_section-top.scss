@@ -1,5 +1,4 @@
 .top {
-  overflow: hidden;
   &__background-img {
     background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/bg.jpg");
     background-position: center;
@@ -9,17 +8,14 @@
   }
   &__inner {
     max-width: 750px;
-    padding-top: 250px;
-  }
-  &__info {
-    //opacity: 0.7;
+    padding-top: 300px;
   }
   &__title {
+    letter-spacing: 3px;
     font-size: 110px;
     line-height: 105px;
     color: $white;
     padding-bottom: 20px;
-    //text-shadow: 5px 3px 2px $dark-blue;
     position: relative;
     &::after {
       content: "";
@@ -41,6 +37,7 @@
 @include small-tablet {
   .top {
     &__title {
+      letter-spacing: 2px;
       font-size: 80px;
       line-height: 1;
     }
@@ -52,17 +49,20 @@
 
 @include mobile-mini {
   .top {
-    &__background-img {
-      min-height: 650px;
-    }
+     &__background-img {
+       min-height: 600px;
+     }
     &__title {
       padding-bottom: 10px;
+      &::after {
+        width: 150px;
+      }
     }
     &__text {
       padding-top: 10px;
     }
     &__inner {
-      padding-top: 300px;
+      padding-top: 350px;
     }
     &__title {
       font-size: 50px;

@@ -1,6 +1,5 @@
 .vacancies {
   padding: 0px 0px 100px;
-  overflow: hidden;
   &__prev {
     background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
     background-position: center;
@@ -11,8 +10,8 @@
     padding-bottom: 10px;
   }
 
-  &__content {
-    padding-top: 70px;
+  .accordion__inner-content {
+    padding: 20px;
   }
 }
 
