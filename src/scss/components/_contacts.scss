@@ -70,14 +70,6 @@
 
 @include tablet {
   .contacts {
-    .contacts__info-row {
-      flex-direction: column;
-    }
-  }
-}
-
-@include small-tablet {
-  .contacts {
     &__prev {
       min-height: 200px;
       padding: 60px 0px 10px;
@@ -92,6 +84,9 @@
     }
     .contacts__info {
       margin-left: 0;
+    }
+    .contacts__info-row {
+      flex-direction: column;
     }
   }
 }

@@ -73,7 +73,7 @@
   }
 }
 
-@include small-tablet {
+@include tablet {
   .about {
     &__prev {
       min-height: 200px;

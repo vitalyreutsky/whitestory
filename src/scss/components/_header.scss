@@ -52,6 +52,10 @@
     text-transform: none;
     padding: 15px;
   }
+
+  .contacts__info-item {
+    margin-right: 0;
+  }
 }
 
 //menu
@@ -66,7 +70,6 @@
     }
   }
   &__list-link {
-    // padding-top: 10px;
     color: $grey;
     font-weight: 700;
     line-height: 22px;
@@ -84,6 +87,9 @@
       background-color: $white;
       transition: width 0.4s;
     }
+    &:hover {
+      color: $white;
+    }
     &:hover:after {
       width: 100%;
     }
@@ -95,7 +101,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 0px;
+      bottom: -1px;
       left: 0;
       right: 0;
 
@@ -121,16 +127,6 @@
 }
 
 @include tablet {
-  .header {
-    .menu {
-      .menu__list {
-        flex-wrap: wrap;
-      }
-    }
-  }
-}
-
-@include small-tablet {
   .burger {
     display: block;
     color: $white;
@@ -188,6 +184,8 @@
     .menu__list {
       flex-direction: column;
       align-items: center;
+      flex-wrap: wrap;
+      min-height: 100%;
       background: $gradient-bg;
       box-shadow: 15px 9px 33px 42px rgba(61, 69, 75, 0.2);
       padding: 20px;

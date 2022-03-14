@@ -6,12 +6,10 @@ export const validateForms = (selector, rules, afterSend) => {
   const telSelector = form?.querySelectorAll(".form__input-tel");
 
   if (!form) {
-    console.error("Нет такого селектора!");
     return false;
   }
 
   if (!rules) {
-    console.error("Вы не передали правила валидации!");
     return false;
   }
 

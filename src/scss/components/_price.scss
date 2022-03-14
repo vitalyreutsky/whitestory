@@ -102,7 +102,7 @@
   color: #fff;
 }
 
-@include small-tablet {
+@include tablet {
   .price {
     padding: 0px 0px 50px;
     &__prev {
