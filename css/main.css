@@ -107,12 +107,6 @@ body {
   max-width: 1250px;
 }
 
-.big-container {
-  position: relative;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
 img {
   max-width: 100%;
   -o-object-fit: cover;
