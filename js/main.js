@@ -480,10 +480,30 @@ function easeInOutCubic(t, b, c, d) {
   \**********************************************/
 /***/ (() => {
 
+var header = document.querySelector(".header__bottom");
+var headerTop = document.querySelector(".header__top");
+var body = document.body;
+
+function funcEventListener() {
+  if (body.clientWidth >= 1024) {
+    if (window.scrollY > 190) {
+      headerTop.classList.add("hide-header");
+      header.classList.add("scrolling-active");
+    } else {
+      headerTop.classList.remove("hide-header");
+      header.classList.remove("scrolling-active");
+    }
+  } else {
+    headerTop.classList.remove("hide-header");
+    header.classList.remove("scrolling-active");
+  }
+}
+
 window.addEventListener("scroll", function () {
-  var header = document.querySelector(".header__bottom");
-  var headerTop = document.querySelector(".header__top"); //  headerTop.classList.toggle("hide", window.scrollY > 190);
-  //  header.classList.toggle("scrolling-active", window.scrollY > 190);
+  return funcEventListener();
+});
+window.addEventListener("resize", function () {
+  return funcEventListener();
 });
 
 /***/ }),

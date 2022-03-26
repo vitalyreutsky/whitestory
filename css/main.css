@@ -192,16 +192,12 @@ img {
     margin-top: 5px;
   }
 }
-.hide {
-  display: none;
-}
-
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 12;
   background-color: rgba(54, 56, 56, 0.6);
   -webkit-box-shadow: 7px 3px 8px #363838;
   box-shadow: 7px 3px 8px #363838;
@@ -214,6 +210,11 @@ img {
   background: -webkit-gradient(linear, left top, right top, from(#646678), color-stop(#595865), to(#353338));
   background: -o-linear-gradient(left, #646678, #595865, #353338);
   background: linear-gradient(90deg, #646678, #595865, #353338);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .header__top-connection {
   display: -webkit-box;
@@ -239,12 +240,6 @@ img {
   align-items: center;
   padding: 20px 0px;
 }
-.header__btn {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
 .header__info-phone {
   padding-right: 10px;
 }
@@ -266,6 +261,14 @@ img {
   margin-right: 0;
 }
 
+.scrolling-active {
+  background-color: #4c4957;
+}
+
+.hide-header {
+  display: none;
+}
+
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,6 +285,9 @@ img {
   font-weight: 700;
   line-height: 22px;
   position: relative;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 .menu__list-link::after {
   content: "";
@@ -940,7 +946,7 @@ img {
   padding-bottom: 10px;
 }
 .price__content {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 .accordion__item {
@@ -1059,7 +1065,7 @@ img {
     padding-top: 120px;
   }
   .price__content {
-    padding-top: 30px;
+    padding-top: 40px;
   }
 
   .accordion__table td {
@@ -1114,7 +1120,7 @@ img {
   }
 }
 .team {
-  padding: 0px 0px 70px;
+  padding: 0px 0px 80px;
   overflow: hidden;
 }
 .team__prev {
@@ -1128,7 +1134,7 @@ img {
   padding-bottom: 10px;
 }
 .team__content {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .team__row {
   display: -webkit-box;
