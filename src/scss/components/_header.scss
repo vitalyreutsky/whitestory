@@ -1,18 +1,17 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
-
+  z-index: 12;
   background-color: rgba($black, 0.6);
   box-shadow: 7px 3px 8px $black;
-
   &__top {
     padding: 10px 0px;
     color: $black;
     box-shadow: 15px 9px 33px 42px rgba(61, 69, 75, 0.2);
     background: $gradient-bg;
+    transition: transform 0.3s ease;
     &-connection {
       display: flex;
       justify-content: space-between;
@@ -27,12 +26,6 @@
     align-items: center;
 
     padding: 20px 0px;
-  }
-  &__btn {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
   }
   &__info-phone {
     padding-right: 10px;
@@ -58,6 +51,14 @@
   }
 }
 
+.scrolling-active {
+  background-color: $dark-blue;
+}
+
+.hide-header {
+  display: none;
+}
+
 //menu
 .menu {
   &__list {
@@ -74,6 +75,7 @@
     font-weight: 700;
     line-height: 22px;
     position: relative;
+    transition: color 0.3s;
     &::after {
       content: "";
       position: absolute;
@@ -143,8 +145,8 @@
     }
     &__top {
       .form__btn {
-        padding: 10px;
-        font-size: 13px;
+        font-size: 15px;
+        padding: 13px;
       }
     }
     &__top-connection {
@@ -170,8 +172,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      overflow: scroll;
+      overflow: auto;
       transform: translateY(-100%);
       transition: transform 0.4s ease-in-out;
       .contacts__icon {

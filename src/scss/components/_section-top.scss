@@ -1,5 +1,5 @@
 .top {
-  overflow: hidden;
+  overflow-x: hidden;
   &__background-img {
     background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/bg.jpg");
     background-position: center;
@@ -51,9 +51,11 @@
 @include mobile-mini {
   .top {
     &__background-img {
-      min-height: 600px;
+      min-height: 650px;
     }
     &__title {
+      font-size: 50px;
+      line-height: 1;
       padding-bottom: 10px;
       &::after {
         width: 150px;
@@ -61,16 +63,10 @@
     }
     &__text {
       padding-top: 10px;
+      font-size: 17px;
     }
     &__inner {
       padding-top: 300px;
-    }
-    &__title {
-      font-size: 50px;
-      line-height: 1;
-    }
-    &__text {
-      font-size: 15px;
     }
   }
 }
