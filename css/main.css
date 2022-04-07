@@ -283,7 +283,6 @@ img {
 .menu__list-link {
   color: #dfdfdf;
   font-weight: 700;
-  line-height: 22px;
   position: relative;
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
@@ -311,13 +310,12 @@ img {
 }
 .menu__list-link--active {
   color: #fff;
-  padding-bottom: 5px;
   position: relative;
 }
 .menu__list-link--active::after {
   content: "";
   position: absolute;
-  bottom: -1px;
+  bottom: -6px;
   left: 0;
   right: 0;
   height: 2px;
@@ -532,9 +530,12 @@ img {
   overflow-x: hidden;
 }
 .top__background-img {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/bg.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/bg.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/bg.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/bg.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/bg.jpg");
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  background-image: -webkit-image-set("../img/bg.avif" type("image/avif"), "../img/bg.webp" type("image/webp"), "../img/bg.jpg" type("image/jpg"));
+  background-image: image-set("../img/bg.avif" type("image/avif"), "../img/bg.webp" type("image/webp"), "../img/bg.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -634,7 +635,7 @@ img {
   justify-content: flex-end;
 }
 .benefits__item-title {
-  font-size: 23px;
+  font-size: 21px;
   text-transform: uppercase;
   line-height: 25px;
   color: #4c4957;
@@ -700,6 +701,13 @@ img {
   margin-bottom: 50px;
 }
 .services__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
   padding: 90px 30px 20px;
   width: 300px;
@@ -822,9 +830,12 @@ img {
   padding-bottom: 100px;
 }
 .about__prev {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/about.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/about.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/about.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/about.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/about.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/about.jpg");
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  background-image: -webkit-image-set("../img/about.avif" type("image/avif"), "../img/about.webp" type("image/webp"), "../img/about.jpg" type("image/jpg"));
+  background-image: image-set("../img/about.avif" type("image/avif"), "../img/about.webp" type("image/webp"), "../img/about.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -936,9 +947,12 @@ img {
   padding: 0px 0px 100px;
 }
 .price__prev {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/price.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/price.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/price.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/price.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/price.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/price.jpg");
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  background-image: -webkit-image-set("../img/price.avif" type("image/avif"), "../img/price.webp" type("image/webp"), "../img/price.jpg" type("image/jpg"));
+  background-image: image-set("../img/price.avif" type("image/avif"), "../img/price.webp" type("image/webp"), "../img/price.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1124,9 +1138,12 @@ img {
   overflow: hidden;
 }
 .team__prev {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/team.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/team.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/team.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/team.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/team.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/team.jpg");
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  background-image: -webkit-image-set("../img/team.avif" type("image/avif"), "../img/team.webp" type("image/webp"), "../img/team.jpg" type("image/jpg"));
+  background-image: image-set("../img/team.avif" type("image/avif"), "../img/team.webp" type("image/webp"), "../img/team.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1260,9 +1277,12 @@ img {
   padding: 0px 0px 100px;
 }
 .contacts__prev {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/contacts.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/contacts.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/contacts.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/contacts.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/contacts.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/contacts.jpg");
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  background-image: -webkit-image-set("../img/contacts.avif" type("image/avif"), "../img/contacts.webp" type("image/webp"), "../img/contacts.jpg" type("image/jpg"));
+  background-image: image-set("../img/contacts.avif" type("image/avif"), "../img/contacts.webp" type("image/webp"), "../img/contacts.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1384,9 +1404,12 @@ img {
   padding: 0px 0px 100px;
 }
 .vacancies__prev {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/vacansies.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/vacansies.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  background-image: -webkit-image-set("../img/vacansies.avif" type("image/avif"), "../img/vacansies.webp" type("image/webp"), "../img/vacansies.jpg" type("image/jpg"));
+  background-image: image-set("../img/vacansies.avif" type("image/avif"), "../img/vacansies.webp" type("image/webp"), "../img/vacansies.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1415,9 +1438,12 @@ img {
   padding: 0px 0px 100px;
 }
 .information__prev {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/information.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/information.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/information.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/information.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/information.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/information.jpg");
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  background-image: -webkit-image-set("../img/information.avif" type("image/avif"), "../img/information.webp" type("image/webp"), "../img/information.jpg" type("image/jpg"));
+  background-image: image-set("../img/information.avif" type("image/avif"), "../img/information.webp" type("image/webp"), "../img/information.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
