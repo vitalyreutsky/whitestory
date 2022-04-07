@@ -73,7 +73,6 @@
   &__list-link {
     color: $grey;
     font-weight: 700;
-    line-height: 22px;
     position: relative;
     transition: color 0.3s;
     &::after {
@@ -82,7 +81,6 @@
       bottom: -6px;
       left: 0;
       right: 0;
-
       height: 2px;
       width: 0;
       border-radius: 1px;
@@ -98,12 +96,11 @@
   }
   &__list-link--active {
     color: $white;
-    padding-bottom: 5px;
     position: relative;
     &::after {
       content: "";
       position: absolute;
-      bottom: -1px;
+      bottom: -6px;
       left: 0;
       right: 0;
 

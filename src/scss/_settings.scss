@@ -39,11 +39,9 @@ a {
 .page {
   box-sizing: border-box;
   height: 100%;
-  position: inherit !important;
 }
 
 body {
-  position: inherit !important;
   font-family: "Muller", sans-serif;
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
@@ -155,3 +153,27 @@ img {
     margin-top: 5px;
   }
 }
+
+//._anim-show {
+//  transform: translate(0px, 120%);
+//  opacity: 0;
+//  transition: all 1s ease 0s;
+//}
+
+//._anim-show._active,
+//._active ._anim-show {
+//  opacity: 1;
+//  transform: translate(0px, 0px);
+//}
+
+//._anim-show-min {
+//  transform: translate(0px, 30%);
+//  opacity: 0;
+//  transition: all 1s ease 0s;
+//}
+
+//._anim-show-min._active,
+//._active ._anim-show-min {
+//  opacity: 1;
+//  transform: translate(0px, 0px);
+//}

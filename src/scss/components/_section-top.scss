@@ -1,7 +1,7 @@
 .top {
   overflow-x: hidden;
   &__background-img {
-    background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/bg.jpg");
+    @include image-set("../img/bg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

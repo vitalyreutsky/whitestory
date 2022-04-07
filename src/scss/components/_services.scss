@@ -16,6 +16,8 @@
   }
 
   &__card {
+    display: flex;
+    flex-direction: column;
     position: relative;
     padding: 90px 30px 20px;
     width: 300px;

@@ -1,7 +1,8 @@
 .about {
   padding-bottom: 100px;
   &__prev {
-    background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/about.jpg");
+    // background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/about.jpg"
+    @include image-set("../img/about");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

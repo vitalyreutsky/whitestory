@@ -1,4 +1,10 @@
 import "./components/scrollingHeader";
 import "./components/accordion";
 import "./components/dynamic_adapt";
+import "./components/burger";
+import "./components/modal";
 import "./components/scrollToTop";
+import "./components/animation";
+import "./components/swiper";
+import "./components/aos";
+import "./components/validate-forms";

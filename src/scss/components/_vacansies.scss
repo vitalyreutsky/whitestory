@@ -1,7 +1,8 @@
 .vacancies {
   padding: 0px 0px 100px;
   &__prev {
-    background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
+    // background: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
+    @include image-set("../img/vacansies");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
