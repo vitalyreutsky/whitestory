@@ -990,7 +990,6 @@ img {
   align-items: center;
   position: relative;
   cursor: pointer;
-  overflow: hidden;
 }
 .accordion__header-title {
   display: -webkit-box;
@@ -1005,17 +1004,6 @@ img {
   height: 40px;
   fill: #fff;
   margin-right: 20px;
-}
-.accordion__header-image {
-  position: absolute;
-  top: -10px;
-  right: 60px;
-  width: 100px;
-  height: 100px;
-  opacity: 0.3;
-  -webkit-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  transform: rotate(30deg);
 }
 .accordion__header-icon {
   fill: #fff;
@@ -1113,11 +1101,6 @@ img {
   .accordion__body-price {
     font-size: 19px;
     font-weight: normal;
-  }
-}
-@media (max-width: 576px) {
-  .accordion__header-image {
-    right: 20px;
   }
 }
 @media (max-width: 471px) {
