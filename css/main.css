@@ -302,10 +302,18 @@ img {
   -o-transition: width 0.4s;
   transition: width 0.4s;
 }
-.menu__list-link:hover {
+@media (min-width: 1025px) {
+  .menu__list-link:hover {
+    color: #fff;
+  }
+  .menu__list-link:hover:after {
+    width: 100%;
+  }
+}
+.menu__list-link:focus {
   color: #fff;
 }
-.menu__list-link:hover:after {
+.menu__list-link:focus:after {
   width: 100%;
 }
 .menu__list-link--active {
@@ -788,32 +796,33 @@ img {
   color: #dfdfdf;
 }
 
-.services__card:hover::before {
-  -webkit-transform: scaleY(1);
-  -ms-transform: scaleY(1);
-  transform: scaleY(1);
-  -webkit-transform-origin: bottom;
-  -ms-transform-origin: bottom;
-  transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
+@media (min-width: 1025px) {
+  .services__card:hover::before {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
 
-.services__card:hover .services__icon {
-  opacity: 1;
-  fill: #fff;
-  -webkit-transform: translateY(-30px);
-  -ms-transform: translateY(-30px);
-  transform: translateY(-30px);
-}
+  .services__card:hover .services__icon {
+    opacity: 1;
+    fill: #fff;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
 
-.services__card:hover .services__title {
-  color: #dfdfdf;
+  .services__card:hover .services__title {
+    color: #dfdfdf;
+  }
 }
-
 @media (max-width: 576px) {
   .services {
     padding-bottom: 20px;
@@ -1858,7 +1867,13 @@ img {
   -webkit-box-shadow: 10px 10px 10px 0px rgba(36, 52, 65, 0.644);
   box-shadow: 10px 10px 10px 0px rgba(36, 52, 65, 0.644);
 }
-.form__btn:hover {
+@media (min-width: 1025px) {
+  .form__btn:hover {
+    background-color: #dfdfdf;
+    color: #4c4957;
+  }
+}
+.form__btn:focus {
   background-color: #dfdfdf;
   color: #4c4957;
 }
@@ -1919,7 +1934,14 @@ img {
 .scroll-btn img {
   fill: #fff;
 }
-.scroll-btn:hover, .scroll-btn:active {
+@media (min-width: 1025px) {
+  .scroll-btn:hover, .scroll-btn:active {
+    background: -webkit-gradient(linear, left top, right top, from(#646678), color-stop(#595865), to(#353338));
+    background: -o-linear-gradient(left, #646678, #595865, #353338);
+    background: linear-gradient(90deg, #646678, #595865, #353338);
+  }
+}
+.scroll-btn:focus, .scroll-btn:active {
   background: -webkit-gradient(linear, left top, right top, from(#646678), color-stop(#595865), to(#353338));
   background: -o-linear-gradient(left, #646678, #595865, #353338);
   background: linear-gradient(90deg, #646678, #595865, #353338);
