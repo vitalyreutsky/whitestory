@@ -2,7 +2,6 @@
   padding: 0px 0px 80px;
   overflow: hidden;
   &__prev {
-    // background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/team.jpg");
     @include image-set("../img/team");
     background-position: center;
     background-repeat: no-repeat;

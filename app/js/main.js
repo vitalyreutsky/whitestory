@@ -19,23 +19,17 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_scrollingHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/scrollingHeader */ "./src/js/components/scrollingHeader.js");
-/* harmony import */ var _components_scrollingHeader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_scrollingHeader__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/dynamic_adapt */ "./src/js/components/dynamic_adapt.js");
-/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_aos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/aos */ "./src/js/components/aos.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
-/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
-/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
-/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_animation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/animation */ "./src/js/components/animation.js");
-/* harmony import */ var _components_animation__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_animation__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/swiper */ "./src/js/components/swiper.js");
-/* harmony import */ var _components_aos__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/aos */ "./src/js/components/aos.js");
-/* harmony import */ var _components_validate_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/validate-forms */ "./src/js/components/validate-forms.js");
-
-
+/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/dynamic_adapt */ "./src/js/components/dynamic_adapt.js");
+/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/swiper */ "./src/js/components/swiper.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_validate_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/validate-forms */ "./src/js/components/validate-forms.js");
 
 
 
@@ -93,48 +87,6 @@ accordionHeader.forEach(function (accordionHeader) {
     }
   });
 });
-
-/***/ }),
-
-/***/ "./src/js/components/animation.js":
-/*!****************************************!*\
-  !*** ./src/js/components/animation.js ***!
-  \****************************************/
-/***/ (() => {
-
-//const animItems = document.querySelectorAll("._anim-items");
-//if (animItems.length > 0) {
-//  window.addEventListener("scroll", animOnScroll);
-//  function animOnScroll() {
-//    for (let i = 0; i < animItems.length; i++) {
-//      const animItem = animItems[i];
-//      const animItemHeight = animItem.offsetHeight;
-//      const animItemOffset = offset(animItem).top;
-//      const animStart = 4;
-//      let animItemPoint = window.innerHeight - animItemHeight / animStart;
-//      if (animItemHeight > window.innerHeight) {
-//        animItemPoint = window.innerHeight - window.innerHeight / animStart;
-//      }
-//      if (
-//        pageYOffset > animItemOffset - animItemPoint &&
-//        pageYOffset < animItemOffset + animItemHeight
-//      ) {
-//        animItem.classList.add("_active");
-//      } else {
-//        if (animItem.classList.contains("._anim-no-hide")) {
-//          animItem.classList.remove("_active");
-//        }
-//      }
-//    }
-//  }
-//  function offset(el) {
-//    const rect = el.getBoundingClientRect(),
-//      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-//      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-//  }
-//  animOnScroll();
-//}
 
 /***/ }),
 
@@ -410,40 +362,6 @@ function easeInOutCubic(t, b, c, d) {
   t -= 2;
   return c / 2 * (t * t * t + 2) + b;
 }
-
-/***/ }),
-
-/***/ "./src/js/components/scrollingHeader.js":
-/*!**********************************************!*\
-  !*** ./src/js/components/scrollingHeader.js ***!
-  \**********************************************/
-/***/ (() => {
-
-var header = document.querySelector(".header__bottom");
-var headerTop = document.querySelector(".header__top");
-var body = document.body;
-
-function funcEventListener() {
-  if (body.clientWidth >= 1024) {
-    if (window.scrollY > 190) {
-      headerTop.classList.add("hide-header");
-      header.classList.add("scrolling-active");
-    } else {
-      headerTop.classList.remove("hide-header");
-      header.classList.remove("scrolling-active");
-    }
-  } else {
-    headerTop.classList.remove("hide-header");
-    header.classList.remove("scrolling-active");
-  }
-}
-
-window.addEventListener("scroll", function () {
-  return funcEventListener();
-});
-window.addEventListener("resize", function () {
-  return funcEventListener();
-});
 
 /***/ }),
 

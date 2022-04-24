@@ -16,7 +16,15 @@
   img {
     fill: $white;
   }
-  &:hover,
+
+  @include for-desktop {
+    &:hover,
+    &:active {
+      background: $gradient-bg;
+    }
+  }
+
+  &:focus,
   &:active {
     background: $gradient-bg;
   }

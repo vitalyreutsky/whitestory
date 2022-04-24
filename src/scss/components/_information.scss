@@ -1,8 +1,6 @@
 .information {
   padding: 0px 0px 100px;
   &__prev {
-    // background: linear-gradient(rgba(0, 0, 0, 0.3)),
-    //   url("../img/information.jpg");
     @include image-set("../img/information");
     background-position: center;
     background-repeat: no-repeat;
@@ -32,5 +30,9 @@
 @include mobile {
   .information {
     padding-bottom: 50px;
+    .title {
+      font-size: 23px;
+      line-height: 1.3;
+    }
   }
 }

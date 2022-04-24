@@ -65,7 +65,15 @@
   text-transform: none;
 
   box-shadow: 10px 10px 10px 0px rgba(36, 52, 65, 0.644);
-  &:hover {
+
+  @include for-desktop {
+    &:hover {
+      background-color: $grey;
+      color: $dark-blue;
+    }
+  }
+
+  &:focus {
     background-color: $grey;
     color: $dark-blue;
   }

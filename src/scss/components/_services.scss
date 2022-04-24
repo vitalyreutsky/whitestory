@@ -11,19 +11,19 @@
 
   &__column {
     display: flex;
-    padding: 0px 20px;
     margin-bottom: 50px;
+    padding: 0px 20px;
   }
 
   &__card {
+    overflow: hidden;
+    width: 300px;
     display: flex;
     flex-direction: column;
     position: relative;
     padding: 90px 30px 20px;
-    width: 300px;
     background: $dark-blue;
     color: $white;
-
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     transition: all 0.5s;
@@ -57,23 +57,23 @@
     transition: 0.5s;
   }
 
+  &__image {
+    position: absolute;
+    top: 0;
+    right: -70px;
+    transform: rotate(30deg);
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+  }
+
   &__title {
     position: relative;
     z-index: 2;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 700;
     margin-bottom: 20px;
     transition: 0.5s;
-  }
-
-  &__text {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 20px;
-    transition: 0.5s;
-    margin-bottom: 20px;
-
-    flex: 1 0 auto;
   }
 
   &__link {
@@ -85,31 +85,37 @@
   }
 }
 
-.services__card:hover::before {
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 0.5s;
-}
+@include for-desktop {
+  .services__card:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+  }
 
-.services__card:hover .services__icon {
-  opacity: 1;
-  fill: $white;
-  transform: translateY(-30px);
-}
+  .services__card:hover .services__icon {
+    opacity: 1;
+    fill: $white;
+    transform: translateY(-30px);
+  }
 
-.services__card:hover .services__title {
-  color: $grey;
+  .services__card:hover .services__title {
+    color: $grey;
+  }
 }
 
 @include mobile {
   .services {
     padding-bottom: 20px;
     &__column {
-      padding-bottom: 30px;
-      margin-bottom: 30px;
+      padding: 0;
     }
+  }
+}
+
+@media (max-width: 330px) {
+  .services {
     &__card {
-      width: auto;
+      width: 270px;
     }
   }
 }
