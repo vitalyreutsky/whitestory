@@ -595,7 +595,7 @@ __webpack_require__.r(__webpack_exports__);
 var disableScroll = function disableScroll() {
   var _document;
 
-  var fixBlocks = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll('.fixed-block');
+  var fixBlocks = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll('.fix-block');
   var pagePosition = window.scrollY;
   var paddingOffset = "".concat(window.innerWidth - _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.offsetWidth, "px");
   _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.style.scrollBehavior = 'none';
@@ -626,21 +626,21 @@ __webpack_require__.r(__webpack_exports__);
 var enableScroll = function enableScroll() {
   var _document;
 
-  var fixBlocks = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll('.fixed-block');
+  var fixBlocks = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll(".fix-block");
   var body = document.body;
   var pagePosition = parseInt(_vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.dataset.position, 10);
   fixBlocks.forEach(function (el) {
-    el.style.paddingRight = '0px';
+    el.style.paddingRight = "0px";
   });
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.paddingRight = '0px';
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.top = 'auto';
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.classList.remove('dis-scroll');
+  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.paddingRight = "0px";
+  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.top = "auto";
+  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.classList.remove("dis-scroll");
   window.scroll({
     top: pagePosition,
     left: 0
   });
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.removeAttribute('data-position');
-  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.style.scrollBehavior = 'smooth';
+  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.removeAttribute("data-position");
+  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.style.scrollBehavior = "smooth";
 };
 
 /***/ }),
