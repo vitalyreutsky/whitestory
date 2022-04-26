@@ -20,12 +20,14 @@
   @include for-desktop {
     &:hover,
     &:active {
+      background-color: $dark-blue;
       background: $gradient-bg;
     }
   }
 
   &:focus,
   &:active {
+    background-color: $dark-blue;
     background: $gradient-bg;
   }
 }

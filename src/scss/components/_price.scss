@@ -1,7 +1,6 @@
 .price {
   padding: 0px 0px 100px;
   &__prev {
-    // background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/price.jpg");
     @include image-set("../img/price");
     background-position: center;
     background-repeat: no-repeat;
@@ -17,6 +16,7 @@
 
 .accordion {
   &__item {
+    background-color: $dark-blue;
     background: $gradient-bg;
     color: $white;
     margin: 10px 0px;

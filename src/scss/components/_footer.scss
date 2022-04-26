@@ -1,10 +1,12 @@
 .footer {
   &__content {
     padding: 10px 0px;
+    background-color: $dark-blue;
     background: $gradient-footer-bg;
   }
 
   &__copyright {
+    background-color: $dark-blue;
     background: $gradient-bg;
     color: $white;
     text-align: center;

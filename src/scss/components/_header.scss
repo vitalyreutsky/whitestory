@@ -163,6 +163,7 @@
       right: 0;
       width: 100%;
       padding: 10px;
+      background-color: $dark-blue;
       background: $gradient-bg;
       box-shadow: 1px 8px 10px 4px rgba(23, 31, 37, 0.2);
     }
@@ -195,6 +196,7 @@
       align-items: center;
       flex-wrap: wrap;
       min-height: 100%;
+      background-color: $dark-blue;
       background: $gradient-bg;
       box-shadow: 15px 9px 33px 42px rgba(61, 69, 75, 0.2);
       padding: 20px;
