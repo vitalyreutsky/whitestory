@@ -374,13 +374,13 @@ function easeInOutCubic(t, b, c, d) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-var _Swiper, _Swiper2;
+var _Swiper, _Swiper2, _Swiper3;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // Подключение свайпера
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Keyboard]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Keyboard, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade]);
 var swiperAbout = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper-about", (_Swiper = {
   autoplay: true,
   slidesPerView: 2.6,
@@ -443,6 +443,20 @@ var swiperStudies = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper-
     slidesPerView: 3
   }
 }), _Swiper2));
+var swiperTop = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".top-swiper", (_Swiper3 = {
+  autoplay: true,
+  slidesPerView: 1,
+  //  slidesPerGroup: 1,
+  spaceBetween: 0,
+  loop: true,
+  centeredSlides: true,
+  effect: "fade"
+}, _defineProperty(_Swiper3, "autoplay", {
+  delay: 2000
+}), _defineProperty(_Swiper3, "speed", 1500), _defineProperty(_Swiper3, "keyboard", {
+  enabled: true,
+  onlyInViewport: true
+}), _Swiper3));
 
 /***/ }),
 
