@@ -1,15 +1,26 @@
 .top {
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 100vh;
+
   &__background-img {
-    @include image-set("../img/bg");
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 700px;
+    animation: bg 8s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+  &__background-img--first {
+    @include image-set("../img/slide3");
+  }
+  &__background-img--second {
+    @include image-set("../img/slide4");
   }
   &__inner {
+    position: absolute;
     max-width: 750px;
-    padding-top: 300px;
+    top: 50%;
+    z-index: 10;
   }
   &__title {
     letter-spacing: 3px;
@@ -66,7 +77,19 @@
       font-size: 17px;
     }
     &__inner {
-      padding-top: 300px;
+      //top: 300px;
     }
+  }
+}
+
+@keyframes bg {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.2);
   }
 }
