@@ -97,8 +97,10 @@
     display: flex;
     align-items: flex-start;
     a {
-      padding-left: 10px;
-      padding-top: 2px;
+      display: flex;
+      align-items: center;
+      color: inherit;
+      gap: 10px;
     }
   }
 }

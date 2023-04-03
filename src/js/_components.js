@@ -1,3 +1,4 @@
+import "./components/header";
 import "./components/aos";
 import "./components/modal";
 import "./components/scrollToTop";
