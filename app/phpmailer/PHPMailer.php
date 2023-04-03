@@ -4414,7 +4414,6 @@ class PHPMailer
             'tiff' => 'image/tiff',
             'tif' => 'image/tiff',
             'webp' => 'image/webp',
-            'avif' => 'image/avif',
             'heif' => 'image/heif',
             'heifs' => 'image/heif-sequence',
             'heic' => 'image/heic',

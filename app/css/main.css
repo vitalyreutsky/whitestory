@@ -556,16 +556,16 @@ img {
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/slide3.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/slide3.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-  background-image: -webkit-image-set("../img/slide3.avif" type("image/avif"), "../img/slide3.webp" type("image/webp"), "../img/slide3.jpg" type("image/jpg"));
-  background-image: image-set("../img/slide3.avif" type("image/avif"), "../img/slide3.webp" type("image/webp"), "../img/slide3.jpg" type("image/jpg"));
+  background-image: -webkit-image-set("../img/slide3.webp" type("image/webp"), "../img/slide3.jpg" type("image/jpg"));
+  background-image: image-set("../img/slide3.webp" type("image/webp"), "../img/slide3.jpg" type("image/jpg"));
 }
 .top__background-img--second {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../img/slide4.jpg");
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/slide4.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/slide4.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-  background-image: -webkit-image-set("../img/slide4.avif" type("image/avif"), "../img/slide4.webp" type("image/webp"), "../img/slide4.jpg" type("image/jpg"));
-  background-image: image-set("../img/slide4.avif" type("image/avif"), "../img/slide4.webp" type("image/webp"), "../img/slide4.jpg" type("image/jpg"));
+  background-image: -webkit-image-set("../img/slide4.webp" type("image/webp"), "../img/slide4.jpg" type("image/jpg"));
+  background-image: image-set("../img/slide4.webp" type("image/webp"), "../img/slide4.jpg" type("image/jpg"));
 }
 .top__inner {
   position: absolute;
@@ -890,8 +890,8 @@ img {
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/about.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/about.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-  background-image: -webkit-image-set("../img/about.avif" type("image/avif"), "../img/about.webp" type("image/webp"), "../img/about.jpg" type("image/jpg"));
-  background-image: image-set("../img/about.avif" type("image/avif"), "../img/about.webp" type("image/webp"), "../img/about.jpg" type("image/jpg"));
+  background-image: -webkit-image-set("../img/about.webp" type("image/webp"), "../img/about.jpg" type("image/jpg"));
+  background-image: image-set("../img/about.webp" type("image/webp"), "../img/about.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1007,8 +1007,8 @@ img {
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/price.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/price.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-  background-image: -webkit-image-set("../img/price.avif" type("image/avif"), "../img/price.webp" type("image/webp"), "../img/price.jpg" type("image/jpg"));
-  background-image: image-set("../img/price.avif" type("image/avif"), "../img/price.webp" type("image/webp"), "../img/price.jpg" type("image/jpg"));
+  background-image: -webkit-image-set("../img/price.webp" type("image/webp"), "../img/price.jpg" type("image/jpg"));
+  background-image: image-set("../img/price.webp" type("image/webp"), "../img/price.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1199,8 +1199,8 @@ img {
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/team.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/team.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-  background-image: -webkit-image-set("../img/team.avif" type("image/avif"), "../img/team.webp" type("image/webp"), "../img/team.jpg" type("image/jpg"));
-  background-image: image-set("../img/team.avif" type("image/avif"), "../img/team.webp" type("image/webp"), "../img/team.jpg" type("image/jpg"));
+  background-image: -webkit-image-set("../img/team.webp" type("image/webp"), "../img/team.jpg" type("image/jpg"));
+  background-image: image-set("../img/team.webp" type("image/webp"), "../img/team.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1338,8 +1338,8 @@ img {
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/contacts.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/contacts.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-  background-image: -webkit-image-set("../img/contacts.avif" type("image/avif"), "../img/contacts.webp" type("image/webp"), "../img/contacts.jpg" type("image/jpg"));
-  background-image: image-set("../img/contacts.avif" type("image/avif"), "../img/contacts.webp" type("image/webp"), "../img/contacts.jpg" type("image/jpg"));
+  background-image: -webkit-image-set("../img/contacts.webp" type("image/webp"), "../img/contacts.jpg" type("image/jpg"));
+  background-image: image-set("../img/contacts.webp" type("image/webp"), "../img/contacts.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1466,8 +1466,8 @@ img {
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/vacansies.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-  background-image: -webkit-image-set("../img/vacansies.avif" type("image/avif"), "../img/vacansies.webp" type("image/webp"), "../img/vacansies.jpg" type("image/jpg"));
-  background-image: image-set("../img/vacansies.avif" type("image/avif"), "../img/vacansies.webp" type("image/webp"), "../img/vacansies.jpg" type("image/jpg"));
+  background-image: -webkit-image-set("../img/vacansies.webp" type("image/webp"), "../img/vacansies.jpg" type("image/jpg"));
+  background-image: image-set("../img/vacansies.webp" type("image/webp"), "../img/vacansies.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1500,8 +1500,8 @@ img {
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/information.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../img/information.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-  background-image: -webkit-image-set("../img/information.avif" type("image/avif"), "../img/information.webp" type("image/webp"), "../img/information.jpg" type("image/jpg"));
-  background-image: image-set("../img/information.avif" type("image/avif"), "../img/information.webp" type("image/webp"), "../img/information.jpg" type("image/jpg"));
+  background-image: -webkit-image-set("../img/information.webp" type("image/webp"), "../img/information.jpg" type("image/jpg"));
+  background-image: image-set("../img/information.webp" type("image/webp"), "../img/information.jpg" type("image/jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

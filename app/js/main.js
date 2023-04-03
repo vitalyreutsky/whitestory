@@ -380,10 +380,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 // Подключение свайпера
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Keyboard, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Keyboard, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs]);
 var swiperAbout = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper-about", (_Swiper = {
   autoplay: true,
-  slidesPerView: 2.6,
+  slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 10,
   freeMode: true,

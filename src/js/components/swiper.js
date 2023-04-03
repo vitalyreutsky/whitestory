@@ -6,11 +6,12 @@ import Swiper, {
   Keyboard,
   EffectFlip,
   EffectFade,
+  Thumbs,
 } from "swiper";
-Swiper.use([Navigation, Pagination, Autoplay, Keyboard, EffectFade]);
+Swiper.use([Navigation, Pagination, Autoplay, Keyboard, EffectFade, Thumbs]);
 const swiperAbout = new Swiper(".swiper-about", {
   autoplay: true,
-  slidesPerView: 2.6,
+  slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 10,
   freeMode: true,
@@ -98,18 +99,4 @@ const swiperTop = new Swiper(".top-swiper", {
     enabled: true,
     onlyInViewport: true,
   },
-  //  breakpoints: {
-  //    280: {
-  //      slidesPerView: 1,
-  //    },
-  //    320: {
-  //      slidesPerView: 1,
-  //    },
-  //    480: {
-  //      slidesPerView: 2,
-  //    },
-  //    992: {
-  //      slidesPerView: 3,
-  //    },
-  //  },
 });
